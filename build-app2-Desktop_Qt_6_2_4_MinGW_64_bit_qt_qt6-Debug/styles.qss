@@ -28,6 +28,7 @@ QLabel#subtitleLabel {
     margin: 10px 0px;
 }
 
+/* Default button style */
 QPushButton {
     background-color: #007aff;
     border: none;
@@ -53,6 +54,75 @@ QPushButton:pressed {
 QPushButton:disabled {
     background-color: #f2f2f7;
     color: #8e8e93;
+}
+
+/* Primary buttons (Tab 1) */
+QPushButton#pushButton1_1, QPushButton#pushButton1_2, QPushButton#pushButton1_3 {
+    background-color: #007aff;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 24px;
+    margin: 8px;
+    min-width: 140px;
+    min-height: 50px;
+}
+
+QPushButton#pushButton1_1:hover, QPushButton#pushButton1_2:hover, QPushButton#pushButton1_3:hover {
+    background-color: #0056cc;
+}
+
+QPushButton#pushButton1_1:pressed, QPushButton#pushButton1_2:pressed, QPushButton#pushButton1_3:pressed {
+    background-color: #004499;
+    transform: scale(0.98);
+}
+
+/* Secondary buttons (Tab 2) */
+QPushButton#pushButton2_1, QPushButton#pushButton2_2, QPushButton#pushButton2_3 {
+    background-color: #f2f2f7;
+    color: #007aff;
+    border: 1px solid #d1d1d6;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 24px;
+    margin: 8px;
+    min-width: 140px;
+    min-height: 50px;
+}
+
+QPushButton#pushButton2_1:hover, QPushButton#pushButton2_2:hover, QPushButton#pushButton2_3:hover {
+    background-color: #e5e5ea;
+}
+
+QPushButton#pushButton2_1:pressed, QPushButton#pushButton2_2:pressed, QPushButton#pushButton2_3:pressed {
+    background-color: #d1d1d6;
+    transform: scale(0.98);
+}
+
+/* Destructive buttons (Tab 3) */
+QPushButton#pushButton3_1, QPushButton#pushButton3_2, QPushButton#pushButton3_3 {
+    background-color: #ff3b30;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 24px;
+    margin: 8px;
+    min-width: 140px;
+    min-height: 50px;
+}
+
+QPushButton#pushButton3_1:hover, QPushButton#pushButton3_2:hover, QPushButton#pushButton3_3:hover {
+    background-color: #d70015;
+}
+
+QPushButton#pushButton3_1:pressed, QPushButton#pushButton3_2:pressed, QPushButton#pushButton3_3:pressed {
+    background-color: #b30000;
+    transform: scale(0.98);
 }
 
 QFrame#headerCard {

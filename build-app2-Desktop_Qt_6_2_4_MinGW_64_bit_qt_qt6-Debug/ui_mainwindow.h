@@ -61,6 +61,14 @@ public:
     QPushButton *pushButton3_2;
     QPushButton *pushButton3_3;
     QSpacerItem *verticalSpacer_3;
+    QWidget *tab;
+    QTabWidget *tabWidget_2;
+    QWidget *tab_3;
+    QPushButton *pushButton;
+    QWidget *tab_4;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton1_4;
+    QWidget *tab_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -217,22 +225,48 @@ public:
         verticalLayout_4->addItem(verticalSpacer_3);
 
         tabWidget->addTab(tab3, QString());
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        tabWidget_2 = new QTabWidget(tab);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tabWidget_2->setGeometry(QRect(-4, 9, 461, 251));
+        tab_3 = new QWidget();
+        tab_3->setObjectName(QString::fromUtf8("tab_3"));
+        pushButton = new QPushButton(tab_3);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(100, 80, 80, 27));
+        tabWidget_2->addTab(tab_3, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QString::fromUtf8("tab_4"));
+        pushButton_2 = new QPushButton(tab_4);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(120, 80, 80, 27));
+        pushButton1_4 = new QPushButton(tab_4);
+        pushButton1_4->setObjectName(QString::fromUtf8("pushButton1_4"));
+        pushButton1_4->setGeometry(QRect(40, 40, 396, 27));
+        tabWidget_2->addTab(tab_4, QString());
+        tabWidget->addTab(tab, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        tabWidget->addTab(tab_2, QString());
 
         verticalLayout->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setVisible(false);
+        menubar->setGeometry(QRect(0, 0, 500, 25));
+        menubar->setVisible(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        statusbar->setVisible(false);
+        statusbar->setVisible(true);
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
+        tabWidget_2->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -244,10 +278,10 @@ public:
         titleLabel->setText(QCoreApplication::translate("MainWindow", "App Dashboard", nullptr));
         subtitleLabel->setText(QCoreApplication::translate("MainWindow", "Navigate through different app sections", nullptr));
         description1->setText(QCoreApplication::translate("MainWindow", "Essential system apps and settings", nullptr));
-        pushButton1_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\261 Settings", nullptr));
-        pushButton1_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\247 Messages", nullptr));
-        pushButton1_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\236 Phone", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab1), QCoreApplication::translate("MainWindow", "Home", nullptr));
+        pushButton1_1->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
+        pushButton1_2->setText(QCoreApplication::translate("MainWindow", "Messages", nullptr));
+        pushButton1_3->setText(QCoreApplication::translate("MainWindow", "Phone", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab1), QCoreApplication::translate("MainWindow", "Ho               me", nullptr));
         description2->setText(QCoreApplication::translate("MainWindow", "Entertainment and media applications", nullptr));
         pushButton2_1->setText(QCoreApplication::translate("MainWindow", "\360\237\216\265 Music", nullptr));
         pushButton2_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\267 Camera", nullptr));
@@ -258,6 +292,13 @@ public:
         pushButton3_2->setText(QCoreApplication::translate("MainWindow", "\342\217\260 Clock", nullptr));
         pushButton3_3->setText(QCoreApplication::translate("MainWindow", "\360\237\227\202\357\270\217 Files", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab3), QCoreApplication::translate("MainWindow", "Tools", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton1_4->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Page4", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Page 5", nullptr));
     } // retranslateUi
 
 };
