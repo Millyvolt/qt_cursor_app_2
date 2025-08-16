@@ -32,7 +32,7 @@ private slots:
     void onButton3_3Clicked();
 
 private:
-//    void showIOSNotification(const QString &title, const QString &message);
+    void loadStylesheet();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

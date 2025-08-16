@@ -69,12 +69,6 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(500, 772);
-        MainWindow->setStyleSheet(QString::fromUtf8("QWidget {\n"
-"    background-color: #f2f2f7;\n"
-"    color: #1d1d1f;\n"
-"    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n"
-"    font-size: 16px;\n"
-"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -83,35 +77,16 @@ public:
         verticalLayout->setContentsMargins(20, 20, 20, 20);
         headerCard = new QFrame(centralwidget);
         headerCard->setObjectName(QString::fromUtf8("headerCard"));
-        headerCard->setStyleSheet(QString::fromUtf8("QFrame#headerCard {\n"
-"    background-color: white;\n"
-"    border-radius: 16px;\n"
-"    border: 1px solid #e5e5ea;\n"
-"    margin: 16px;\n"
-"    padding: 24px;\n"
-"}"));
         headerLayout = new QVBoxLayout(headerCard);
         headerLayout->setObjectName(QString::fromUtf8("headerLayout"));
         titleLabel = new QLabel(headerCard);
         titleLabel->setObjectName(QString::fromUtf8("titleLabel"));
-        titleLabel->setStyleSheet(QString::fromUtf8("QLabel#titleLabel {\n"
-"    font-size: 28px;\n"
-"    font-weight: 700;\n"
-"    color: #1d1d1f;\n"
-"    margin: 20px 0px;\n"
-"}"));
         titleLabel->setAlignment(Qt::AlignCenter);
 
         headerLayout->addWidget(titleLabel);
 
         subtitleLabel = new QLabel(headerCard);
         subtitleLabel->setObjectName(QString::fromUtf8("subtitleLabel"));
-        subtitleLabel->setStyleSheet(QString::fromUtf8("QLabel#subtitleLabel {\n"
-"    font-size: 17px;\n"
-"    font-weight: 400;\n"
-"    color: #86868b;\n"
-"    margin: 10px 0px;\n"
-"}"));
         subtitleLabel->setAlignment(Qt::AlignCenter);
         subtitleLabel->setWordWrap(true);
 
@@ -122,41 +97,6 @@ public:
 
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setStyleSheet(QString::fromUtf8("QTabWidget::pane {\n"
-"    border: none;\n"
-"    background-color: #f2f2f7;\n"
-"}\n"
-"\n"
-"QTabWidget::tab-bar {\n"
-"    alignment: center;\n"
-"}\n"
-"\n"
-"QTabBar::tab {\n"
-"    background-color: white;\n"
-"    color: #86868b;\n"
-"    border: none;\n"
-"    border-radius: 8px 8px 0px 0px;\n"
-"    padding: 12px 20px;\n"
-"    margin: 0px 2px;\n"
-"    font-size: 15px;\n"
-"    font-weight: 500;\n"
-"    min-width: 80px;\n"
-"}\n"
-"\n"
-"QTabBar::tab:selected {\n"
-"    background-color: #f2f2f7;\n"
-"    color: #007aff;\n"
-"    font-weight: 600;\n"
-"}\n"
-"\n"
-"QTabBar::tab:hover:!selected {\n"
-"    background-color: #e5e5ea;\n"
-"    color: #1d1d1f;\n"
-"}\n"
-"\n"
-"QTabWidget::tab-content {\n"
-"    background-color: #f2f2f7;\n"
-"    border: none;"));
         tab1 = new QWidget();
         tab1->setObjectName(QString::fromUtf8("tab1"));
         verticalLayout_2 = new QVBoxLayout(tab1);
@@ -165,18 +105,10 @@ public:
         verticalLayout_2->setContentsMargins(20, 20, 20, 20);
         card1 = new QFrame(tab1);
         card1->setObjectName(QString::fromUtf8("card1"));
-        card1->setStyleSheet(QString::fromUtf8("QFrame#card {\n"
-"    background-color: white;\n"
-"    border-radius: 16px;\n"
-"    border: 1px solid #e5e5ea;\n"
-"    margin: 16px;\n"
-"    padding: 20px;\n"
-"}"));
         card1Layout = new QVBoxLayout(card1);
         card1Layout->setObjectName(QString::fromUtf8("card1Layout"));
         description1 = new QLabel(card1);
         description1->setObjectName(QString::fromUtf8("description1"));
-        description1->setStyleSheet(QString::fromUtf8("QLabel { color: #86868b; font-size: 15px; margin: 10px; }"));
         description1->setAlignment(Qt::AlignCenter);
         description1->setWordWrap(true);
 
@@ -184,79 +116,16 @@ public:
 
         pushButton1_1 = new QPushButton(card1);
         pushButton1_1->setObjectName(QString::fromUtf8("pushButton1_1"));
-        pushButton1_1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card1Layout->addWidget(pushButton1_1);
 
         pushButton1_2 = new QPushButton(card1);
         pushButton1_2->setObjectName(QString::fromUtf8("pushButton1_2"));
-        pushButton1_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card1Layout->addWidget(pushButton1_2);
 
         pushButton1_3 = new QPushButton(card1);
         pushButton1_3->setObjectName(QString::fromUtf8("pushButton1_3"));
-        pushButton1_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card1Layout->addWidget(pushButton1_3);
 
@@ -276,18 +145,10 @@ public:
         verticalLayout_3->setContentsMargins(20, 20, 20, 20);
         card2 = new QFrame(tab2);
         card2->setObjectName(QString::fromUtf8("card2"));
-        card2->setStyleSheet(QString::fromUtf8("QFrame#card {\n"
-"    background-color: white;\n"
-"    border-radius: 16px;\n"
-"    border: 1px solid #e5e5ea;\n"
-"    margin: 16px;\n"
-"    padding: 20px;\n"
-"}"));
         card2Layout = new QVBoxLayout(card2);
         card2Layout->setObjectName(QString::fromUtf8("card2Layout"));
         description2 = new QLabel(card2);
         description2->setObjectName(QString::fromUtf8("description2"));
-        description2->setStyleSheet(QString::fromUtf8("QLabel { color: #86868b; font-size: 15px; margin: 10px; }"));
         description2->setAlignment(Qt::AlignCenter);
         description2->setWordWrap(true);
 
@@ -295,79 +156,16 @@ public:
 
         pushButton2_1 = new QPushButton(card2);
         pushButton2_1->setObjectName(QString::fromUtf8("pushButton2_1"));
-        pushButton2_1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card2Layout->addWidget(pushButton2_1);
 
         pushButton2_2 = new QPushButton(card2);
         pushButton2_2->setObjectName(QString::fromUtf8("pushButton2_2"));
-        pushButton2_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card2Layout->addWidget(pushButton2_2);
 
         pushButton2_3 = new QPushButton(card2);
         pushButton2_3->setObjectName(QString::fromUtf8("pushButton2_3"));
-        pushButton2_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card2Layout->addWidget(pushButton2_3);
 
@@ -387,18 +185,10 @@ public:
         verticalLayout_4->setContentsMargins(20, 20, 20, 20);
         card3 = new QFrame(tab3);
         card3->setObjectName(QString::fromUtf8("card3"));
-        card3->setStyleSheet(QString::fromUtf8("QFrame#card {\n"
-"    background-color: white;\n"
-"    border-radius: 16px;\n"
-"    border: 1px solid #e5e5ea;\n"
-"    margin: 16px;\n"
-"    padding: 20px;\n"
-"}"));
         card3Layout = new QVBoxLayout(card3);
         card3Layout->setObjectName(QString::fromUtf8("card3Layout"));
         description3 = new QLabel(card3);
         description3->setObjectName(QString::fromUtf8("description3"));
-        description3->setStyleSheet(QString::fromUtf8("QLabel { color: #86868b; font-size: 15px; margin: 10px; }"));
         description3->setAlignment(Qt::AlignCenter);
         description3->setWordWrap(true);
 
@@ -406,79 +196,16 @@ public:
 
         pushButton3_1 = new QPushButton(card3);
         pushButton3_1->setObjectName(QString::fromUtf8("pushButton3_1"));
-        pushButton3_1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card3Layout->addWidget(pushButton3_1);
 
         pushButton3_2 = new QPushButton(card3);
         pushButton3_2->setObjectName(QString::fromUtf8("pushButton3_2"));
-        pushButton3_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card3Layout->addWidget(pushButton3_2);
 
         pushButton3_3 = new QPushButton(card3);
         pushButton3_3->setObjectName(QString::fromUtf8("pushButton3_3"));
-        pushButton3_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #007aff;\n"
-"    border: none;\n"
-"    border-radius: 12px;\n"
-"    color: white;\n"
-"    font-size: 17px;\n"
-"    font-weight: 600;\n"
-"    padding: 16px 24px;\n"
-"    margin: 8px;\n"
-"    min-width: 140px;\n"
-"    min-height: 50px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #0056cc;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #004499;\n"
-"    transform: scale(0.98);\n"
-"}"));
 
         card3Layout->addWidget(pushButton3_3);
 
