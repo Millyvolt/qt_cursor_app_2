@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1000</width>
     <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>iOS Style Qt Application</string>
+   <string>KMZ Configuration Suite</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -46,7 +46,7 @@
        <item>
         <widget class="QLabel" name="subtitleLabel">
          <property name="text">
-          <string>Interface friendly to Wasyans</string>
+          <string>Wasyan friendly interface</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -297,9 +297,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>760</width>
-          <height>900</height>
+          <y>9</y>
+          <width>961</width>
+          <height>891</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -342,24 +342,209 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_analogue_1">
-               <property name="text">
-                <string>📊 Analogue Input 1</string>
+              <widget class="QFrame" name="ios_row_analogue_input">
+               <layout class="QHBoxLayout" name="ios_row_analogue_inputLayout">
+                <item>
+                 <spacer name="horizontalSpacer_15">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_analogue_input">
+                  <property name="styleSheet">
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Input</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_16">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_analogue_input">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Analogue Input A</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Analogue Input B</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Analogue Input C</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Analogue Input D</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_17">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_analogue">
+               <property name="styleSheet">
+                <string notr="true">background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_analogue_2">
-               <property name="text">
-                <string>📊 Analogue Input 2</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_analogue_3">
-               <property name="text">
-                <string>📊 Analogue Input 3</string>
-               </property>
+              <widget class="QFrame" name="ios_row_analogue_function">
+               <layout class="QHBoxLayout" name="ios_row_analogue_functionLayout">
+                <item>
+                 <spacer name="horizontalSpacer_18">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_analogue_function">
+                  <property name="styleSheet">
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Function</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_19">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_analogue_function">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Not Used</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Oil Sensor</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Temperature Sensor</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Fuel Sensor</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Flexible Analogue</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_20">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -487,7 +672,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>Digital Input 1</string>
@@ -613,7 +798,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>Alarm</string>
@@ -741,7 +926,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>Normal</string>
@@ -859,7 +1044,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>None</string>
@@ -987,7 +1172,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>Enabled</string>
@@ -1105,7 +1290,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>Show Status</string>
@@ -1228,7 +1413,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string>font-size: 17px; color: #007aff; background: transparent; border: none;</string>
+                   <string notr="true"/>
                   </property>
                   <property name="currentText">
                    <string>0s</string>
@@ -1382,6 +1567,330 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab8">
+       <attribute name="title">
+        <string>Communications</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>9</y>
+          <width>961</width>
+          <height>891</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab_rs485">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <attribute name="title">
+          <string>RS-485</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_rs485">
+          <property name="spacing">
+           <number>16</number>
+          </property>
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="card_rs485">
+            <layout class="QVBoxLayout" name="card_rs485Layout">
+             <item>
+              <widget class="QLabel" name="description_rs485">
+               <property name="text">
+                <string>RS-485 communication configuration</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs485_1">
+               <property name="text">
+                <string>⚙️ Baud Rate Settings</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs485_2">
+               <property name="text">
+                <string>🔧 Protocol Configuration</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs485_3">
+               <property name="text">
+                <string>📊 Device Address</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_rs485">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_can">
+         <attribute name="title">
+          <string>CAN</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_can">
+          <property name="spacing">
+           <number>16</number>
+          </property>
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="card_can">
+            <layout class="QVBoxLayout" name="card_canLayout">
+             <item>
+              <widget class="QLabel" name="description_can">
+               <property name="text">
+                <string>CAN bus communication configuration</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_can_1">
+               <property name="text">
+                <string>🚗 CAN ID Configuration</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_can_2">
+               <property name="text">
+                <string>⚡ Bit Rate Settings</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_can_3">
+               <property name="text">
+                <string>📡 Message Filters</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_can">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_ethernet">
+         <attribute name="title">
+          <string>Ethernet</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_ethernet">
+          <property name="spacing">
+           <number>16</number>
+          </property>
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="card_ethernet">
+            <layout class="QVBoxLayout" name="card_ethernetLayout">
+             <item>
+              <widget class="QLabel" name="description_ethernet">
+               <property name="text">
+                <string>Ethernet network configuration</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_ethernet_1">
+               <property name="text">
+                <string>🌐 IP Configuration</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_ethernet_2">
+               <property name="text">
+                <string>🔌 Port Settings</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_ethernet_3">
+               <property name="text">
+                <string>🛡️ Firewall Settings</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_ethernet">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_rs232">
+         <attribute name="title">
+          <string>RS-232</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_rs232">
+          <property name="spacing">
+           <number>16</number>
+          </property>
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="card_rs232">
+            <layout class="QVBoxLayout" name="card_rs232Layout">
+             <item>
+              <widget class="QLabel" name="description_rs232">
+               <property name="text">
+                <string>RS-232 serial communication configuration</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs232_1">
+               <property name="text">
+                <string>⚙️ Serial Port Settings</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs232_2">
+               <property name="text">
+                <string>📊 Data Format</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_rs232_3">
+               <property name="text">
+                <string>🔧 Flow Control</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_rs232">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -1391,7 +1900,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1000</width>
      <height>25</height>
     </rect>
    </property>

@@ -32,9 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton3_2, &QPushButton::clicked, this, &MainWindow::onButton3_2Clicked);
     connect(ui->pushButton3_3, &QPushButton::clicked, this, &MainWindow::onButton3_3Clicked);
     
-    connect(ui->pushButton_analogue_1, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue1Clicked);
-    connect(ui->pushButton_analogue_2, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue2Clicked);
-    connect(ui->pushButton_analogue_3, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue3Clicked);
+    connect(ui->comboBox_analogue_input, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxAnalogueInputChanged);
+    connect(ui->comboBox_analogue_function, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxAnalogueFunctionChanged);
     
     connect(ui->comboBox_input, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxInputChanged);
     connect(ui->comboBox_function, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxFunctionChanged);
@@ -47,6 +46,22 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton7_1, &QPushButton::clicked, this, &MainWindow::onButton7_1Clicked);
     connect(ui->pushButton7_2, &QPushButton::clicked, this, &MainWindow::onButton7_2Clicked);
     connect(ui->pushButton7_3, &QPushButton::clicked, this, &MainWindow::onButton7_3Clicked);
+    
+    connect(ui->pushButton_rs485_1, &QPushButton::clicked, this, &MainWindow::onButtonRs485_1Clicked);
+    connect(ui->pushButton_rs485_2, &QPushButton::clicked, this, &MainWindow::onButtonRs485_2Clicked);
+    connect(ui->pushButton_rs485_3, &QPushButton::clicked, this, &MainWindow::onButtonRs485_3Clicked);
+    
+    connect(ui->pushButton_can_1, &QPushButton::clicked, this, &MainWindow::onButtonCan_1Clicked);
+    connect(ui->pushButton_can_2, &QPushButton::clicked, this, &MainWindow::onButtonCan_2Clicked);
+    connect(ui->pushButton_can_3, &QPushButton::clicked, this, &MainWindow::onButtonCan_3Clicked);
+    
+    connect(ui->pushButton_ethernet_1, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_1Clicked);
+    connect(ui->pushButton_ethernet_2, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_2Clicked);
+    connect(ui->pushButton_ethernet_3, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_3Clicked);
+    
+    connect(ui->pushButton_rs232_1, &QPushButton::clicked, this, &MainWindow::onButtonRs232_1Clicked);
+    connect(ui->pushButton_rs232_2, &QPushButton::clicked, this, &MainWindow::onButtonRs232_2Clicked);
+    connect(ui->pushButton_rs232_3, &QPushButton::clicked, this, &MainWindow::onButtonRs232_3Clicked);
 }
 
 MainWindow::~MainWindow()
@@ -118,20 +133,15 @@ void MainWindow::onButton3_3Clicked()
     QMessageBox::information(this, "Files", "Opening Files app...");
 }
 
-// Button click handlers for Tab 6 (Inputs - Analogue)
-void MainWindow::onButtonAnalogue1Clicked()
+// ComboBox change handlers for Tab 6 (Inputs - Analogue)
+void MainWindow::onComboBoxAnalogueInputChanged(const QString &text)
 {
-    QMessageBox::information(this, "Analogue Input 1", "Configuring Analogue Input 1...");
+    qDebug() << "Analogue Input changed to:" << text;
 }
 
-void MainWindow::onButtonAnalogue2Clicked()
+void MainWindow::onComboBoxAnalogueFunctionChanged(const QString &text)
 {
-    QMessageBox::information(this, "Analogue Input 2", "Configuring Analogue Input 2...");
-}
-
-void MainWindow::onButtonAnalogue3Clicked()
-{
-    QMessageBox::information(this, "Analogue Input 3", "Configuring Analogue Input 3...");
+    qDebug() << "Analogue Function changed to:" << text;
 }
 
 // ComboBox change handlers for Tab 6 (Inputs - Digital)
@@ -184,5 +194,69 @@ void MainWindow::onButton7_2Clicked()
 void MainWindow::onButton7_3Clicked()
 {
     QMessageBox::information(this, "Reports", "Opening Reports...");
+}
+
+// Button click handlers for Tab 8 (Communications - RS-485)
+void MainWindow::onButtonRs485_1Clicked()
+{
+    QMessageBox::information(this, "Baud Rate Settings", "Opening RS-485 Baud Rate Settings...");
+}
+
+void MainWindow::onButtonRs485_2Clicked()
+{
+    QMessageBox::information(this, "Protocol Configuration", "Opening RS-485 Protocol Configuration...");
+}
+
+void MainWindow::onButtonRs485_3Clicked()
+{
+    QMessageBox::information(this, "Device Address", "Opening RS-485 Device Address Configuration...");
+}
+
+// Button click handlers for Tab 8 (Communications - CAN)
+void MainWindow::onButtonCan_1Clicked()
+{
+    QMessageBox::information(this, "CAN ID Configuration", "Opening CAN ID Configuration...");
+}
+
+void MainWindow::onButtonCan_2Clicked()
+{
+    QMessageBox::information(this, "Bit Rate Settings", "Opening CAN Bit Rate Settings...");
+}
+
+void MainWindow::onButtonCan_3Clicked()
+{
+    QMessageBox::information(this, "Message Filters", "Opening CAN Message Filters...");
+}
+
+// Button click handlers for Tab 8 (Communications - Ethernet)
+void MainWindow::onButtonEthernet_1Clicked()
+{
+    QMessageBox::information(this, "IP Configuration", "Opening Ethernet IP Configuration...");
+}
+
+void MainWindow::onButtonEthernet_2Clicked()
+{
+    QMessageBox::information(this, "Port Settings", "Opening Ethernet Port Settings...");
+}
+
+void MainWindow::onButtonEthernet_3Clicked()
+{
+    QMessageBox::information(this, "Firewall Settings", "Opening Ethernet Firewall Settings...");
+}
+
+// Button click handlers for Tab 8 (Communications - RS-232)
+void MainWindow::onButtonRs232_1Clicked()
+{
+    QMessageBox::information(this, "Serial Port Settings", "Opening RS-232 Serial Port Settings...");
+}
+
+void MainWindow::onButtonRs232_2Clicked()
+{
+    QMessageBox::information(this, "Data Format", "Opening RS-232 Data Format Configuration...");
+}
+
+void MainWindow::onButtonRs232_3Clicked()
+{
+    QMessageBox::information(this, "Flow Control", "Opening RS-232 Flow Control Settings...");
 }
 

@@ -70,9 +70,21 @@ public:
     QFrame *card_analogue;
     QVBoxLayout *card_analogueLayout;
     QLabel *description_analogue;
-    QPushButton *pushButton_analogue_1;
-    QPushButton *pushButton_analogue_2;
-    QPushButton *pushButton_analogue_3;
+    QFrame *ios_row_analogue_input;
+    QHBoxLayout *ios_row_analogue_inputLayout;
+    QSpacerItem *horizontalSpacer_15;
+    QLabel *label_analogue_input;
+    QSpacerItem *horizontalSpacer_16;
+    QComboBox *comboBox_analogue_input;
+    QSpacerItem *horizontalSpacer_17;
+    QFrame *ios_separator_analogue;
+    QFrame *ios_row_analogue_function;
+    QHBoxLayout *ios_row_analogue_functionLayout;
+    QSpacerItem *horizontalSpacer_18;
+    QLabel *label_analogue_function;
+    QSpacerItem *horizontalSpacer_19;
+    QComboBox *comboBox_analogue_function;
+    QSpacerItem *horizontalSpacer_20;
     QSpacerItem *verticalSpacer_analogue;
     QWidget *tab_digital;
     QVBoxLayout *verticalLayout_digital;
@@ -143,6 +155,44 @@ public:
     QPushButton *pushButton7_2;
     QPushButton *pushButton7_3;
     QSpacerItem *verticalSpacer_5;
+    QWidget *tab8;
+    QTabWidget *tabWidget_5;
+    QWidget *tab_rs485;
+    QVBoxLayout *verticalLayout_rs485;
+    QFrame *card_rs485;
+    QVBoxLayout *card_rs485Layout;
+    QLabel *description_rs485;
+    QPushButton *pushButton_rs485_1;
+    QPushButton *pushButton_rs485_2;
+    QPushButton *pushButton_rs485_3;
+    QSpacerItem *verticalSpacer_rs485;
+    QWidget *tab_can;
+    QVBoxLayout *verticalLayout_can;
+    QFrame *card_can;
+    QVBoxLayout *card_canLayout;
+    QLabel *description_can;
+    QPushButton *pushButton_can_1;
+    QPushButton *pushButton_can_2;
+    QPushButton *pushButton_can_3;
+    QSpacerItem *verticalSpacer_can;
+    QWidget *tab_ethernet;
+    QVBoxLayout *verticalLayout_ethernet;
+    QFrame *card_ethernet;
+    QVBoxLayout *card_ethernetLayout;
+    QLabel *description_ethernet;
+    QPushButton *pushButton_ethernet_1;
+    QPushButton *pushButton_ethernet_2;
+    QPushButton *pushButton_ethernet_3;
+    QSpacerItem *verticalSpacer_ethernet;
+    QWidget *tab_rs232;
+    QVBoxLayout *verticalLayout_rs232;
+    QFrame *card_rs232;
+    QVBoxLayout *card_rs232Layout;
+    QLabel *description_rs232;
+    QPushButton *pushButton_rs232_1;
+    QPushButton *pushButton_rs232_2;
+    QPushButton *pushButton_rs232_3;
+    QSpacerItem *verticalSpacer_rs232;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -150,7 +200,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 1000);
+        MainWindow->resize(1000, 1000);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -303,7 +353,7 @@ public:
         tab6->setObjectName(QString::fromUtf8("tab6"));
         tabWidget_4 = new QTabWidget(tab6);
         tabWidget_4->setObjectName(QString::fromUtf8("tabWidget_4"));
-        tabWidget_4->setGeometry(QRect(0, 0, 760, 900));
+        tabWidget_4->setGeometry(QRect(0, 9, 961, 891));
         tab_analogue = new QWidget();
         tab_analogue->setObjectName(QString::fromUtf8("tab_analogue"));
         verticalLayout_analogue = new QVBoxLayout(tab_analogue);
@@ -321,20 +371,86 @@ public:
 
         card_analogueLayout->addWidget(description_analogue);
 
-        pushButton_analogue_1 = new QPushButton(card_analogue);
-        pushButton_analogue_1->setObjectName(QString::fromUtf8("pushButton_analogue_1"));
+        ios_row_analogue_input = new QFrame(card_analogue);
+        ios_row_analogue_input->setObjectName(QString::fromUtf8("ios_row_analogue_input"));
+        ios_row_analogue_inputLayout = new QHBoxLayout(ios_row_analogue_input);
+        ios_row_analogue_inputLayout->setObjectName(QString::fromUtf8("ios_row_analogue_inputLayout"));
+        horizontalSpacer_15 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        card_analogueLayout->addWidget(pushButton_analogue_1);
+        ios_row_analogue_inputLayout->addItem(horizontalSpacer_15);
 
-        pushButton_analogue_2 = new QPushButton(card_analogue);
-        pushButton_analogue_2->setObjectName(QString::fromUtf8("pushButton_analogue_2"));
+        label_analogue_input = new QLabel(ios_row_analogue_input);
+        label_analogue_input->setObjectName(QString::fromUtf8("label_analogue_input"));
+        label_analogue_input->setStyleSheet(QString::fromUtf8("font-size: 17px; color: #1d1d1f;"));
 
-        card_analogueLayout->addWidget(pushButton_analogue_2);
+        ios_row_analogue_inputLayout->addWidget(label_analogue_input);
 
-        pushButton_analogue_3 = new QPushButton(card_analogue);
-        pushButton_analogue_3->setObjectName(QString::fromUtf8("pushButton_analogue_3"));
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        card_analogueLayout->addWidget(pushButton_analogue_3);
+        ios_row_analogue_inputLayout->addItem(horizontalSpacer_16);
+
+        comboBox_analogue_input = new QComboBox(ios_row_analogue_input);
+        comboBox_analogue_input->addItem(QString());
+        comboBox_analogue_input->addItem(QString());
+        comboBox_analogue_input->addItem(QString());
+        comboBox_analogue_input->addItem(QString());
+        comboBox_analogue_input->setObjectName(QString::fromUtf8("comboBox_analogue_input"));
+        comboBox_analogue_input->setMinimumSize(QSize(200, 0));
+        comboBox_analogue_input->setFrame(true);
+
+        ios_row_analogue_inputLayout->addWidget(comboBox_analogue_input);
+
+        horizontalSpacer_17 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_analogue_inputLayout->addItem(horizontalSpacer_17);
+
+
+        card_analogueLayout->addWidget(ios_row_analogue_input);
+
+        ios_separator_analogue = new QFrame(card_analogue);
+        ios_separator_analogue->setObjectName(QString::fromUtf8("ios_separator_analogue"));
+        ios_separator_analogue->setStyleSheet(QString::fromUtf8("background-color: #e5e5ea; border: none; max-height: 1px;"));
+        ios_separator_analogue->setFrameShape(QFrame::HLine);
+        ios_separator_analogue->setFrameShadow(QFrame::Sunken);
+
+        card_analogueLayout->addWidget(ios_separator_analogue);
+
+        ios_row_analogue_function = new QFrame(card_analogue);
+        ios_row_analogue_function->setObjectName(QString::fromUtf8("ios_row_analogue_function"));
+        ios_row_analogue_functionLayout = new QHBoxLayout(ios_row_analogue_function);
+        ios_row_analogue_functionLayout->setObjectName(QString::fromUtf8("ios_row_analogue_functionLayout"));
+        horizontalSpacer_18 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_analogue_functionLayout->addItem(horizontalSpacer_18);
+
+        label_analogue_function = new QLabel(ios_row_analogue_function);
+        label_analogue_function->setObjectName(QString::fromUtf8("label_analogue_function"));
+        label_analogue_function->setStyleSheet(QString::fromUtf8("font-size: 17px; color: #1d1d1f;"));
+
+        ios_row_analogue_functionLayout->addWidget(label_analogue_function);
+
+        horizontalSpacer_19 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_analogue_functionLayout->addItem(horizontalSpacer_19);
+
+        comboBox_analogue_function = new QComboBox(ios_row_analogue_function);
+        comboBox_analogue_function->addItem(QString());
+        comboBox_analogue_function->addItem(QString());
+        comboBox_analogue_function->addItem(QString());
+        comboBox_analogue_function->addItem(QString());
+        comboBox_analogue_function->addItem(QString());
+        comboBox_analogue_function->setObjectName(QString::fromUtf8("comboBox_analogue_function"));
+        comboBox_analogue_function->setMinimumSize(QSize(200, 0));
+        comboBox_analogue_function->setFrame(true);
+
+        ios_row_analogue_functionLayout->addWidget(comboBox_analogue_function);
+
+        horizontalSpacer_20 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_analogue_functionLayout->addItem(horizontalSpacer_20);
+
+
+        card_analogueLayout->addWidget(ios_row_analogue_function);
 
 
         verticalLayout_analogue->addWidget(card_analogue);
@@ -385,6 +501,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_input->sizePolicy().hasHeightForWidth());
         comboBox_input->setSizePolicy(sizePolicy);
         comboBox_input->setMinimumSize(QSize(150, 0));
+        comboBox_input->setStyleSheet(QString::fromUtf8(""));
         comboBox_input->setFrame(true);
 
         ios_row_input_layout->addWidget(comboBox_input);
@@ -430,6 +547,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_function->sizePolicy().hasHeightForWidth());
         comboBox_function->setSizePolicy(sizePolicy);
         comboBox_function->setMinimumSize(QSize(150, 0));
+        comboBox_function->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_function_layout->addWidget(comboBox_function);
 
@@ -472,6 +590,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_polarity->sizePolicy().hasHeightForWidth());
         comboBox_polarity->setSizePolicy(sizePolicy);
         comboBox_polarity->setMinimumSize(QSize(150, 0));
+        comboBox_polarity->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_polarity_layout->addWidget(comboBox_polarity);
 
@@ -516,6 +635,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_action->sizePolicy().hasHeightForWidth());
         comboBox_action->setSizePolicy(sizePolicy);
         comboBox_action->setMinimumSize(QSize(150, 0));
+        comboBox_action->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_action_layout->addWidget(comboBox_action);
 
@@ -558,6 +678,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_arming->sizePolicy().hasHeightForWidth());
         comboBox_arming->setSizePolicy(sizePolicy);
         comboBox_arming->setMinimumSize(QSize(150, 0));
+        comboBox_arming->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_arming_layout->addWidget(comboBox_arming);
 
@@ -601,6 +722,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_lcd->sizePolicy().hasHeightForWidth());
         comboBox_lcd->setSizePolicy(sizePolicy);
         comboBox_lcd->setMinimumSize(QSize(150, 0));
+        comboBox_lcd->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_lcd_layout->addWidget(comboBox_lcd);
 
@@ -647,6 +769,7 @@ public:
         sizePolicy.setHeightForWidth(comboBox_delay->sizePolicy().hasHeightForWidth());
         comboBox_delay->setSizePolicy(sizePolicy);
         comboBox_delay->setMinimumSize(QSize(150, 0));
+        comboBox_delay->setStyleSheet(QString::fromUtf8(""));
 
         ios_row_delay_layout->addWidget(comboBox_delay);
 
@@ -707,13 +830,184 @@ public:
         verticalLayout_6->addItem(verticalSpacer_5);
 
         tabWidget->addTab(tab7, QString());
+        tab8 = new QWidget();
+        tab8->setObjectName(QString::fromUtf8("tab8"));
+        tabWidget_5 = new QTabWidget(tab8);
+        tabWidget_5->setObjectName(QString::fromUtf8("tabWidget_5"));
+        tabWidget_5->setGeometry(QRect(0, 9, 961, 891));
+        tab_rs485 = new QWidget();
+        tab_rs485->setObjectName(QString::fromUtf8("tab_rs485"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(tab_rs485->sizePolicy().hasHeightForWidth());
+        tab_rs485->setSizePolicy(sizePolicy1);
+        verticalLayout_rs485 = new QVBoxLayout(tab_rs485);
+        verticalLayout_rs485->setSpacing(16);
+        verticalLayout_rs485->setObjectName(QString::fromUtf8("verticalLayout_rs485"));
+        verticalLayout_rs485->setContentsMargins(20, 20, 20, 20);
+        card_rs485 = new QFrame(tab_rs485);
+        card_rs485->setObjectName(QString::fromUtf8("card_rs485"));
+        card_rs485Layout = new QVBoxLayout(card_rs485);
+        card_rs485Layout->setObjectName(QString::fromUtf8("card_rs485Layout"));
+        description_rs485 = new QLabel(card_rs485);
+        description_rs485->setObjectName(QString::fromUtf8("description_rs485"));
+        description_rs485->setAlignment(Qt::AlignCenter);
+        description_rs485->setWordWrap(true);
+
+        card_rs485Layout->addWidget(description_rs485);
+
+        pushButton_rs485_1 = new QPushButton(card_rs485);
+        pushButton_rs485_1->setObjectName(QString::fromUtf8("pushButton_rs485_1"));
+
+        card_rs485Layout->addWidget(pushButton_rs485_1);
+
+        pushButton_rs485_2 = new QPushButton(card_rs485);
+        pushButton_rs485_2->setObjectName(QString::fromUtf8("pushButton_rs485_2"));
+
+        card_rs485Layout->addWidget(pushButton_rs485_2);
+
+        pushButton_rs485_3 = new QPushButton(card_rs485);
+        pushButton_rs485_3->setObjectName(QString::fromUtf8("pushButton_rs485_3"));
+
+        card_rs485Layout->addWidget(pushButton_rs485_3);
+
+
+        verticalLayout_rs485->addWidget(card_rs485);
+
+        verticalSpacer_rs485 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_rs485->addItem(verticalSpacer_rs485);
+
+        tabWidget_5->addTab(tab_rs485, QString());
+        tab_can = new QWidget();
+        tab_can->setObjectName(QString::fromUtf8("tab_can"));
+        verticalLayout_can = new QVBoxLayout(tab_can);
+        verticalLayout_can->setSpacing(16);
+        verticalLayout_can->setObjectName(QString::fromUtf8("verticalLayout_can"));
+        verticalLayout_can->setContentsMargins(20, 20, 20, 20);
+        card_can = new QFrame(tab_can);
+        card_can->setObjectName(QString::fromUtf8("card_can"));
+        card_canLayout = new QVBoxLayout(card_can);
+        card_canLayout->setObjectName(QString::fromUtf8("card_canLayout"));
+        description_can = new QLabel(card_can);
+        description_can->setObjectName(QString::fromUtf8("description_can"));
+        description_can->setAlignment(Qt::AlignCenter);
+        description_can->setWordWrap(true);
+
+        card_canLayout->addWidget(description_can);
+
+        pushButton_can_1 = new QPushButton(card_can);
+        pushButton_can_1->setObjectName(QString::fromUtf8("pushButton_can_1"));
+
+        card_canLayout->addWidget(pushButton_can_1);
+
+        pushButton_can_2 = new QPushButton(card_can);
+        pushButton_can_2->setObjectName(QString::fromUtf8("pushButton_can_2"));
+
+        card_canLayout->addWidget(pushButton_can_2);
+
+        pushButton_can_3 = new QPushButton(card_can);
+        pushButton_can_3->setObjectName(QString::fromUtf8("pushButton_can_3"));
+
+        card_canLayout->addWidget(pushButton_can_3);
+
+
+        verticalLayout_can->addWidget(card_can);
+
+        verticalSpacer_can = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_can->addItem(verticalSpacer_can);
+
+        tabWidget_5->addTab(tab_can, QString());
+        tab_ethernet = new QWidget();
+        tab_ethernet->setObjectName(QString::fromUtf8("tab_ethernet"));
+        verticalLayout_ethernet = new QVBoxLayout(tab_ethernet);
+        verticalLayout_ethernet->setSpacing(16);
+        verticalLayout_ethernet->setObjectName(QString::fromUtf8("verticalLayout_ethernet"));
+        verticalLayout_ethernet->setContentsMargins(20, 20, 20, 20);
+        card_ethernet = new QFrame(tab_ethernet);
+        card_ethernet->setObjectName(QString::fromUtf8("card_ethernet"));
+        card_ethernetLayout = new QVBoxLayout(card_ethernet);
+        card_ethernetLayout->setObjectName(QString::fromUtf8("card_ethernetLayout"));
+        description_ethernet = new QLabel(card_ethernet);
+        description_ethernet->setObjectName(QString::fromUtf8("description_ethernet"));
+        description_ethernet->setAlignment(Qt::AlignCenter);
+        description_ethernet->setWordWrap(true);
+
+        card_ethernetLayout->addWidget(description_ethernet);
+
+        pushButton_ethernet_1 = new QPushButton(card_ethernet);
+        pushButton_ethernet_1->setObjectName(QString::fromUtf8("pushButton_ethernet_1"));
+
+        card_ethernetLayout->addWidget(pushButton_ethernet_1);
+
+        pushButton_ethernet_2 = new QPushButton(card_ethernet);
+        pushButton_ethernet_2->setObjectName(QString::fromUtf8("pushButton_ethernet_2"));
+
+        card_ethernetLayout->addWidget(pushButton_ethernet_2);
+
+        pushButton_ethernet_3 = new QPushButton(card_ethernet);
+        pushButton_ethernet_3->setObjectName(QString::fromUtf8("pushButton_ethernet_3"));
+
+        card_ethernetLayout->addWidget(pushButton_ethernet_3);
+
+
+        verticalLayout_ethernet->addWidget(card_ethernet);
+
+        verticalSpacer_ethernet = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_ethernet->addItem(verticalSpacer_ethernet);
+
+        tabWidget_5->addTab(tab_ethernet, QString());
+        tab_rs232 = new QWidget();
+        tab_rs232->setObjectName(QString::fromUtf8("tab_rs232"));
+        verticalLayout_rs232 = new QVBoxLayout(tab_rs232);
+        verticalLayout_rs232->setSpacing(16);
+        verticalLayout_rs232->setObjectName(QString::fromUtf8("verticalLayout_rs232"));
+        verticalLayout_rs232->setContentsMargins(20, 20, 20, 20);
+        card_rs232 = new QFrame(tab_rs232);
+        card_rs232->setObjectName(QString::fromUtf8("card_rs232"));
+        card_rs232Layout = new QVBoxLayout(card_rs232);
+        card_rs232Layout->setObjectName(QString::fromUtf8("card_rs232Layout"));
+        description_rs232 = new QLabel(card_rs232);
+        description_rs232->setObjectName(QString::fromUtf8("description_rs232"));
+        description_rs232->setAlignment(Qt::AlignCenter);
+        description_rs232->setWordWrap(true);
+
+        card_rs232Layout->addWidget(description_rs232);
+
+        pushButton_rs232_1 = new QPushButton(card_rs232);
+        pushButton_rs232_1->setObjectName(QString::fromUtf8("pushButton_rs232_1"));
+
+        card_rs232Layout->addWidget(pushButton_rs232_1);
+
+        pushButton_rs232_2 = new QPushButton(card_rs232);
+        pushButton_rs232_2->setObjectName(QString::fromUtf8("pushButton_rs232_2"));
+
+        card_rs232Layout->addWidget(pushButton_rs232_2);
+
+        pushButton_rs232_3 = new QPushButton(card_rs232);
+        pushButton_rs232_3->setObjectName(QString::fromUtf8("pushButton_rs232_3"));
+
+        card_rs232Layout->addWidget(pushButton_rs232_3);
+
+
+        verticalLayout_rs232->addWidget(card_rs232);
+
+        verticalSpacer_rs232 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_rs232->addItem(verticalSpacer_rs232);
+
+        tabWidget_5->addTab(tab_rs232, QString());
+        tabWidget->addTab(tab8, QString());
 
         verticalLayout->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 25));
+        menubar->setGeometry(QRect(0, 0, 1000, 25));
         menubar->setVisible(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
@@ -725,6 +1019,7 @@ public:
 
         tabWidget->setCurrentIndex(3);
         tabWidget_4->setCurrentIndex(1);
+        tabWidget_5->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -732,9 +1027,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "iOS Style Qt Application", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "KMZ Configuration Suite", nullptr));
         titleLabel->setText(QCoreApplication::translate("MainWindow", "KMZ Configuration Suite v1.0", nullptr));
-        subtitleLabel->setText(QCoreApplication::translate("MainWindow", "Interface friendly to Wasyans", nullptr));
+        subtitleLabel->setText(QCoreApplication::translate("MainWindow", "Wasyan friendly interface", nullptr));
         description1->setText(QCoreApplication::translate("MainWindow", "Essential system apps and settings", nullptr));
         pushButton1_1->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         pushButton1_2->setText(QCoreApplication::translate("MainWindow", "Messages", nullptr));
@@ -751,9 +1046,19 @@ public:
         pushButton3_3->setText(QCoreApplication::translate("MainWindow", "\360\237\227\202\357\270\217 Files", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab3), QCoreApplication::translate("MainWindow", "Mains", nullptr));
         description_analogue->setText(QCoreApplication::translate("MainWindow", "Analogue input configuration and monitoring", nullptr));
-        pushButton_analogue_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 1", nullptr));
-        pushButton_analogue_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 2", nullptr));
-        pushButton_analogue_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 3", nullptr));
+        label_analogue_input->setText(QCoreApplication::translate("MainWindow", "Input", nullptr));
+        comboBox_analogue_input->setItemText(0, QCoreApplication::translate("MainWindow", "Analogue Input A", nullptr));
+        comboBox_analogue_input->setItemText(1, QCoreApplication::translate("MainWindow", "Analogue Input B", nullptr));
+        comboBox_analogue_input->setItemText(2, QCoreApplication::translate("MainWindow", "Analogue Input C", nullptr));
+        comboBox_analogue_input->setItemText(3, QCoreApplication::translate("MainWindow", "Analogue Input D", nullptr));
+
+        label_analogue_function->setText(QCoreApplication::translate("MainWindow", "Function", nullptr));
+        comboBox_analogue_function->setItemText(0, QCoreApplication::translate("MainWindow", "Not Used", nullptr));
+        comboBox_analogue_function->setItemText(1, QCoreApplication::translate("MainWindow", "Oil Sensor", nullptr));
+        comboBox_analogue_function->setItemText(2, QCoreApplication::translate("MainWindow", "Temperature Sensor", nullptr));
+        comboBox_analogue_function->setItemText(3, QCoreApplication::translate("MainWindow", "Fuel Sensor", nullptr));
+        comboBox_analogue_function->setItemText(4, QCoreApplication::translate("MainWindow", "Flexible Analogue", nullptr));
+
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_analogue), QCoreApplication::translate("MainWindow", "Analogue", nullptr));
         label_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
         label_input->setText(QCoreApplication::translate("MainWindow", "Input", nullptr));
@@ -761,7 +1066,6 @@ public:
         comboBox_input->setItemText(1, QCoreApplication::translate("MainWindow", "Digital Input 2", nullptr));
         comboBox_input->setItemText(2, QCoreApplication::translate("MainWindow", "Digital Input 3", nullptr));
 
-        comboBox_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_input->setCurrentText(QCoreApplication::translate("MainWindow", "Digital Input 1", nullptr));
         ios_separator1->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -771,7 +1075,6 @@ public:
         comboBox_function->setItemText(2, QCoreApplication::translate("MainWindow", "Status", nullptr));
         comboBox_function->setItemText(3, QCoreApplication::translate("MainWindow", "Control", nullptr));
 
-        comboBox_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_function->setCurrentText(QCoreApplication::translate("MainWindow", "Alarm", nullptr));
         ios_separator2->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -779,7 +1082,6 @@ public:
         comboBox_polarity->setItemText(0, QCoreApplication::translate("MainWindow", "Normal", nullptr));
         comboBox_polarity->setItemText(1, QCoreApplication::translate("MainWindow", "Inverted", nullptr));
 
-        comboBox_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_polarity->setCurrentText(QCoreApplication::translate("MainWindow", "Normal", nullptr));
         ios_separator3->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -789,7 +1091,6 @@ public:
         comboBox_action->setItemText(2, QCoreApplication::translate("MainWindow", "Digital Output", nullptr));
         comboBox_action->setItemText(3, QCoreApplication::translate("MainWindow", "Email Alert", nullptr));
 
-        comboBox_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_action->setCurrentText(QCoreApplication::translate("MainWindow", "None", nullptr));
         ios_separator4->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -797,7 +1098,6 @@ public:
         comboBox_arming->setItemText(0, QCoreApplication::translate("MainWindow", "Enabled", nullptr));
         comboBox_arming->setItemText(1, QCoreApplication::translate("MainWindow", "Disabled", nullptr));
 
-        comboBox_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_arming->setCurrentText(QCoreApplication::translate("MainWindow", "Enabled", nullptr));
         ios_separator5->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -806,7 +1106,6 @@ public:
         comboBox_lcd->setItemText(1, QCoreApplication::translate("MainWindow", "Hide", nullptr));
         comboBox_lcd->setItemText(2, QCoreApplication::translate("MainWindow", "Show Value", nullptr));
 
-        comboBox_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_lcd->setCurrentText(QCoreApplication::translate("MainWindow", "Show Status", nullptr));
         ios_separator6->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_delay->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
@@ -818,7 +1117,6 @@ public:
         comboBox_delay->setItemText(4, QCoreApplication::translate("MainWindow", "10s", nullptr));
         comboBox_delay->setItemText(5, QCoreApplication::translate("MainWindow", "30s", nullptr));
 
-        comboBox_delay->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
         comboBox_delay->setCurrentText(QCoreApplication::translate("MainWindow", "0s", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_digital), QCoreApplication::translate("MainWindow", "Digital", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab6), QCoreApplication::translate("MainWindow", "Inputs", nullptr));
@@ -827,6 +1125,27 @@ public:
         pushButton7_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\215 Diagnostics", nullptr));
         pushButton7_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\213 Reports", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab7), QCoreApplication::translate("MainWindow", "Outputs", nullptr));
+        description_rs485->setText(QCoreApplication::translate("MainWindow", "RS-485 communication configuration", nullptr));
+        pushButton_rs485_1->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Baud Rate Settings", nullptr));
+        pushButton_rs485_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Protocol Configuration", nullptr));
+        pushButton_rs485_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Device Address", nullptr));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs485), QCoreApplication::translate("MainWindow", "RS-485", nullptr));
+        description_can->setText(QCoreApplication::translate("MainWindow", "CAN bus communication configuration", nullptr));
+        pushButton_can_1->setText(QCoreApplication::translate("MainWindow", "\360\237\232\227 CAN ID Configuration", nullptr));
+        pushButton_can_2->setText(QCoreApplication::translate("MainWindow", "\342\232\241 Bit Rate Settings", nullptr));
+        pushButton_can_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\241 Message Filters", nullptr));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_can), QCoreApplication::translate("MainWindow", "CAN", nullptr));
+        description_ethernet->setText(QCoreApplication::translate("MainWindow", "Ethernet network configuration", nullptr));
+        pushButton_ethernet_1->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 IP Configuration", nullptr));
+        pushButton_ethernet_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Port Settings", nullptr));
+        pushButton_ethernet_3->setText(QCoreApplication::translate("MainWindow", "\360\237\233\241\357\270\217 Firewall Settings", nullptr));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_ethernet), QCoreApplication::translate("MainWindow", "Ethernet", nullptr));
+        description_rs232->setText(QCoreApplication::translate("MainWindow", "RS-232 serial communication configuration", nullptr));
+        pushButton_rs232_1->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Serial Port Settings", nullptr));
+        pushButton_rs232_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Data Format", nullptr));
+        pushButton_rs232_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Flow Control", nullptr));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs232), QCoreApplication::translate("MainWindow", "RS-232", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab8), QCoreApplication::translate("MainWindow", "Communications", nullptr));
     } // retranslateUi
 
 };

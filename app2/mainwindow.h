@@ -31,10 +31,9 @@ private slots:
     void onButton3_2Clicked();
     void onButton3_3Clicked();
     
-    // Button click handlers for Tab 6 (Inputs - Analogue)
-    void onButtonAnalogue1Clicked();
-    void onButtonAnalogue2Clicked();
-    void onButtonAnalogue3Clicked();
+    // ComboBox change handlers for Tab 6 (Inputs - Analogue)
+    void onComboBoxAnalogueInputChanged(const QString &text);
+    void onComboBoxAnalogueFunctionChanged(const QString &text);
     
     // ComboBox change handlers for Tab 6 (Inputs - Digital)
     void onComboBoxInputChanged(const QString &text);
@@ -49,6 +48,26 @@ private slots:
     void onButton7_1Clicked();
     void onButton7_2Clicked();
     void onButton7_3Clicked();
+    
+    // Button click handlers for Tab 8 (Communications - RS-485)
+    void onButtonRs485_1Clicked();
+    void onButtonRs485_2Clicked();
+    void onButtonRs485_3Clicked();
+    
+    // Button click handlers for Tab 8 (Communications - CAN)
+    void onButtonCan_1Clicked();
+    void onButtonCan_2Clicked();
+    void onButtonCan_3Clicked();
+    
+    // Button click handlers for Tab 8 (Communications - Ethernet)
+    void onButtonEthernet_1Clicked();
+    void onButtonEthernet_2Clicked();
+    void onButtonEthernet_3Clicked();
+    
+    // Button click handlers for Tab 8 (Communications - RS-232)
+    void onButtonRs232_1Clicked();
+    void onButtonRs232_2Clicked();
+    void onButtonRs232_3Clicked();
 
 private:
     void loadStylesheet();
