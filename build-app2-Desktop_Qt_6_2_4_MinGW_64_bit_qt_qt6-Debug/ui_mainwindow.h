@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -77,16 +78,62 @@ public:
     QVBoxLayout *verticalLayout_digital;
     QFrame *card_digital;
     QVBoxLayout *card_digitalLayout;
-    QLabel *description_digital;
-    QPushButton *pushButton_digital_1;
-    QPushButton *pushButton_digital_2;
-    QPushButton *pushButton_digital_3;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_2;
-    QPushButton *pushButton_2;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label;
-    QPushButton *pushButton;
+    QFrame *ios_row_input;
+    QHBoxLayout *ios_row_input_layout;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *label_input;
+    QSpacerItem *horizontalSpacer_input;
+    QComboBox *comboBox_input;
+    QSpacerItem *horizontalSpacer;
+    QFrame *ios_separator1;
+    QFrame *ios_row_function;
+    QHBoxLayout *ios_row_function_layout;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label_function;
+    QSpacerItem *horizontalSpacer_function;
+    QComboBox *comboBox_function;
+    QSpacerItem *horizontalSpacer_4;
+    QFrame *ios_separator2;
+    QFrame *ios_row_polarity;
+    QHBoxLayout *ios_row_polarity_layout;
+    QSpacerItem *horizontalSpacer_5;
+    QLabel *label_polarity;
+    QSpacerItem *horizontalSpacer_polarity;
+    QComboBox *comboBox_polarity;
+    QSpacerItem *horizontalSpacer_6;
+    QFrame *ios_separator3;
+    QFrame *ios_row_action;
+    QHBoxLayout *ios_row_action_layout;
+    QSpacerItem *horizontalSpacer_7;
+    QLabel *label_action;
+    QSpacerItem *horizontalSpacer_action;
+    QComboBox *comboBox_action;
+    QSpacerItem *horizontalSpacer_11;
+    QFrame *ios_separator4;
+    QFrame *ios_row_arming;
+    QHBoxLayout *ios_row_arming_layout;
+    QSpacerItem *horizontalSpacer_8;
+    QLabel *label_arming;
+    QSpacerItem *horizontalSpacer_arming;
+    QComboBox *comboBox_arming;
+    QSpacerItem *horizontalSpacer_12;
+    QFrame *ios_separator5;
+    QFrame *ios_row_lcd;
+    QHBoxLayout *ios_row_lcd_layout;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *label_lcd;
+    QSpacerItem *horizontalSpacer_lcd;
+    QComboBox *comboBox_lcd;
+    QSpacerItem *horizontalSpacer_13;
+    QFrame *ios_separator6;
+    QFrame *ios_row_delay;
+    QHBoxLayout *ios_row_delay_layout;
+    QSpacerItem *horizontalSpacer_10;
+    QLabel *label_delay;
+    QSpacerItem *horizontalSpacer_delay;
+    QComboBox *comboBox_delay;
+    QSpacerItem *horizontalSpacer_14;
+    QSpacerItem *verticalSpacer_digital;
     QWidget *tab7;
     QVBoxLayout *verticalLayout_6;
     QFrame *card7;
@@ -306,61 +353,316 @@ public:
         card_digital = new QFrame(tab_digital);
         card_digital->setObjectName(QString::fromUtf8("card_digital"));
         card_digitalLayout = new QVBoxLayout(card_digital);
+        card_digitalLayout->setSpacing(0);
         card_digitalLayout->setObjectName(QString::fromUtf8("card_digitalLayout"));
-        description_digital = new QLabel(card_digital);
-        description_digital->setObjectName(QString::fromUtf8("description_digital"));
-        description_digital->setAlignment(Qt::AlignCenter);
-        description_digital->setWordWrap(true);
+        card_digitalLayout->setContentsMargins(0, 0, 0, 0);
+        ios_row_input = new QFrame(card_digital);
+        ios_row_input->setObjectName(QString::fromUtf8("ios_row_input"));
+        ios_row_input_layout = new QHBoxLayout(ios_row_input);
+        ios_row_input_layout->setObjectName(QString::fromUtf8("ios_row_input_layout"));
+        ios_row_input_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_2 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        card_digitalLayout->addWidget(description_digital);
+        ios_row_input_layout->addItem(horizontalSpacer_2);
 
-        pushButton_digital_1 = new QPushButton(card_digital);
-        pushButton_digital_1->setObjectName(QString::fromUtf8("pushButton_digital_1"));
+        label_input = new QLabel(ios_row_input);
+        label_input->setObjectName(QString::fromUtf8("label_input"));
 
-        card_digitalLayout->addWidget(pushButton_digital_1);
+        ios_row_input_layout->addWidget(label_input);
 
-        pushButton_digital_2 = new QPushButton(card_digital);
-        pushButton_digital_2->setObjectName(QString::fromUtf8("pushButton_digital_2"));
+        horizontalSpacer_input = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        card_digitalLayout->addWidget(pushButton_digital_2);
+        ios_row_input_layout->addItem(horizontalSpacer_input);
 
-        pushButton_digital_3 = new QPushButton(card_digital);
-        pushButton_digital_3->setObjectName(QString::fromUtf8("pushButton_digital_3"));
+        comboBox_input = new QComboBox(ios_row_input);
+        comboBox_input->addItem(QString());
+        comboBox_input->addItem(QString());
+        comboBox_input->addItem(QString());
+        comboBox_input->setObjectName(QString::fromUtf8("comboBox_input"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(comboBox_input->sizePolicy().hasHeightForWidth());
+        comboBox_input->setSizePolicy(sizePolicy);
+        comboBox_input->setMinimumSize(QSize(150, 0));
+        comboBox_input->setFrame(true);
 
-        card_digitalLayout->addWidget(pushButton_digital_3);
+        ios_row_input_layout->addWidget(comboBox_input);
+
+        horizontalSpacer = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_input_layout->addItem(horizontalSpacer);
+
+
+        card_digitalLayout->addWidget(ios_row_input);
+
+        ios_separator1 = new QFrame(card_digital);
+        ios_separator1->setObjectName(QString::fromUtf8("ios_separator1"));
+        ios_separator1->setFrameShape(QFrame::HLine);
+        ios_separator1->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator1);
+
+        ios_row_function = new QFrame(card_digital);
+        ios_row_function->setObjectName(QString::fromUtf8("ios_row_function"));
+        ios_row_function_layout = new QHBoxLayout(ios_row_function);
+        ios_row_function_layout->setObjectName(QString::fromUtf8("ios_row_function_layout"));
+        ios_row_function_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_function_layout->addItem(horizontalSpacer_3);
+
+        label_function = new QLabel(ios_row_function);
+        label_function->setObjectName(QString::fromUtf8("label_function"));
+
+        ios_row_function_layout->addWidget(label_function);
+
+        horizontalSpacer_function = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_function_layout->addItem(horizontalSpacer_function);
+
+        comboBox_function = new QComboBox(ios_row_function);
+        comboBox_function->addItem(QString());
+        comboBox_function->addItem(QString());
+        comboBox_function->addItem(QString());
+        comboBox_function->addItem(QString());
+        comboBox_function->setObjectName(QString::fromUtf8("comboBox_function"));
+        sizePolicy.setHeightForWidth(comboBox_function->sizePolicy().hasHeightForWidth());
+        comboBox_function->setSizePolicy(sizePolicy);
+        comboBox_function->setMinimumSize(QSize(150, 0));
+
+        ios_row_function_layout->addWidget(comboBox_function);
+
+        horizontalSpacer_4 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_function_layout->addItem(horizontalSpacer_4);
+
+
+        card_digitalLayout->addWidget(ios_row_function);
+
+        ios_separator2 = new QFrame(card_digital);
+        ios_separator2->setObjectName(QString::fromUtf8("ios_separator2"));
+        ios_separator2->setFrameShape(QFrame::HLine);
+        ios_separator2->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator2);
+
+        ios_row_polarity = new QFrame(card_digital);
+        ios_row_polarity->setObjectName(QString::fromUtf8("ios_row_polarity"));
+        ios_row_polarity_layout = new QHBoxLayout(ios_row_polarity);
+        ios_row_polarity_layout->setObjectName(QString::fromUtf8("ios_row_polarity_layout"));
+        ios_row_polarity_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_5 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_polarity_layout->addItem(horizontalSpacer_5);
+
+        label_polarity = new QLabel(ios_row_polarity);
+        label_polarity->setObjectName(QString::fromUtf8("label_polarity"));
+
+        ios_row_polarity_layout->addWidget(label_polarity);
+
+        horizontalSpacer_polarity = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_polarity_layout->addItem(horizontalSpacer_polarity);
+
+        comboBox_polarity = new QComboBox(ios_row_polarity);
+        comboBox_polarity->addItem(QString());
+        comboBox_polarity->addItem(QString());
+        comboBox_polarity->setObjectName(QString::fromUtf8("comboBox_polarity"));
+        sizePolicy.setHeightForWidth(comboBox_polarity->sizePolicy().hasHeightForWidth());
+        comboBox_polarity->setSizePolicy(sizePolicy);
+        comboBox_polarity->setMinimumSize(QSize(150, 0));
+
+        ios_row_polarity_layout->addWidget(comboBox_polarity);
+
+        horizontalSpacer_6 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_polarity_layout->addItem(horizontalSpacer_6);
+
+
+        card_digitalLayout->addWidget(ios_row_polarity);
+
+        ios_separator3 = new QFrame(card_digital);
+        ios_separator3->setObjectName(QString::fromUtf8("ios_separator3"));
+        ios_separator3->setFrameShape(QFrame::HLine);
+        ios_separator3->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator3);
+
+        ios_row_action = new QFrame(card_digital);
+        ios_row_action->setObjectName(QString::fromUtf8("ios_row_action"));
+        ios_row_action_layout = new QHBoxLayout(ios_row_action);
+        ios_row_action_layout->setObjectName(QString::fromUtf8("ios_row_action_layout"));
+        ios_row_action_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_7 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_action_layout->addItem(horizontalSpacer_7);
+
+        label_action = new QLabel(ios_row_action);
+        label_action->setObjectName(QString::fromUtf8("label_action"));
+
+        ios_row_action_layout->addWidget(label_action);
+
+        horizontalSpacer_action = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_action_layout->addItem(horizontalSpacer_action);
+
+        comboBox_action = new QComboBox(ios_row_action);
+        comboBox_action->addItem(QString());
+        comboBox_action->addItem(QString());
+        comboBox_action->addItem(QString());
+        comboBox_action->addItem(QString());
+        comboBox_action->setObjectName(QString::fromUtf8("comboBox_action"));
+        sizePolicy.setHeightForWidth(comboBox_action->sizePolicy().hasHeightForWidth());
+        comboBox_action->setSizePolicy(sizePolicy);
+        comboBox_action->setMinimumSize(QSize(150, 0));
+
+        ios_row_action_layout->addWidget(comboBox_action);
+
+        horizontalSpacer_11 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_action_layout->addItem(horizontalSpacer_11);
+
+
+        card_digitalLayout->addWidget(ios_row_action);
+
+        ios_separator4 = new QFrame(card_digital);
+        ios_separator4->setObjectName(QString::fromUtf8("ios_separator4"));
+        ios_separator4->setFrameShape(QFrame::HLine);
+        ios_separator4->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator4);
+
+        ios_row_arming = new QFrame(card_digital);
+        ios_row_arming->setObjectName(QString::fromUtf8("ios_row_arming"));
+        ios_row_arming_layout = new QHBoxLayout(ios_row_arming);
+        ios_row_arming_layout->setObjectName(QString::fromUtf8("ios_row_arming_layout"));
+        ios_row_arming_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_8 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_arming_layout->addItem(horizontalSpacer_8);
+
+        label_arming = new QLabel(ios_row_arming);
+        label_arming->setObjectName(QString::fromUtf8("label_arming"));
+
+        ios_row_arming_layout->addWidget(label_arming);
+
+        horizontalSpacer_arming = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_arming_layout->addItem(horizontalSpacer_arming);
+
+        comboBox_arming = new QComboBox(ios_row_arming);
+        comboBox_arming->addItem(QString());
+        comboBox_arming->addItem(QString());
+        comboBox_arming->setObjectName(QString::fromUtf8("comboBox_arming"));
+        sizePolicy.setHeightForWidth(comboBox_arming->sizePolicy().hasHeightForWidth());
+        comboBox_arming->setSizePolicy(sizePolicy);
+        comboBox_arming->setMinimumSize(QSize(150, 0));
+
+        ios_row_arming_layout->addWidget(comboBox_arming);
+
+        horizontalSpacer_12 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_arming_layout->addItem(horizontalSpacer_12);
+
+
+        card_digitalLayout->addWidget(ios_row_arming);
+
+        ios_separator5 = new QFrame(card_digital);
+        ios_separator5->setObjectName(QString::fromUtf8("ios_separator5"));
+        ios_separator5->setFrameShape(QFrame::HLine);
+        ios_separator5->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator5);
+
+        ios_row_lcd = new QFrame(card_digital);
+        ios_row_lcd->setObjectName(QString::fromUtf8("ios_row_lcd"));
+        ios_row_lcd_layout = new QHBoxLayout(ios_row_lcd);
+        ios_row_lcd_layout->setObjectName(QString::fromUtf8("ios_row_lcd_layout"));
+        ios_row_lcd_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_9 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_lcd_layout->addItem(horizontalSpacer_9);
+
+        label_lcd = new QLabel(ios_row_lcd);
+        label_lcd->setObjectName(QString::fromUtf8("label_lcd"));
+
+        ios_row_lcd_layout->addWidget(label_lcd);
+
+        horizontalSpacer_lcd = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_lcd_layout->addItem(horizontalSpacer_lcd);
+
+        comboBox_lcd = new QComboBox(ios_row_lcd);
+        comboBox_lcd->addItem(QString());
+        comboBox_lcd->addItem(QString());
+        comboBox_lcd->addItem(QString());
+        comboBox_lcd->setObjectName(QString::fromUtf8("comboBox_lcd"));
+        sizePolicy.setHeightForWidth(comboBox_lcd->sizePolicy().hasHeightForWidth());
+        comboBox_lcd->setSizePolicy(sizePolicy);
+        comboBox_lcd->setMinimumSize(QSize(150, 0));
+
+        ios_row_lcd_layout->addWidget(comboBox_lcd);
+
+        horizontalSpacer_13 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_lcd_layout->addItem(horizontalSpacer_13);
+
+
+        card_digitalLayout->addWidget(ios_row_lcd);
+
+        ios_separator6 = new QFrame(card_digital);
+        ios_separator6->setObjectName(QString::fromUtf8("ios_separator6"));
+        ios_separator6->setFrameShape(QFrame::HLine);
+        ios_separator6->setFrameShadow(QFrame::Sunken);
+
+        card_digitalLayout->addWidget(ios_separator6);
+
+        ios_row_delay = new QFrame(card_digital);
+        ios_row_delay->setObjectName(QString::fromUtf8("ios_row_delay"));
+        ios_row_delay_layout = new QHBoxLayout(ios_row_delay);
+        ios_row_delay_layout->setObjectName(QString::fromUtf8("ios_row_delay_layout"));
+        ios_row_delay_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_10 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_delay_layout->addItem(horizontalSpacer_10);
+
+        label_delay = new QLabel(ios_row_delay);
+        label_delay->setObjectName(QString::fromUtf8("label_delay"));
+
+        ios_row_delay_layout->addWidget(label_delay);
+
+        horizontalSpacer_delay = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_delay_layout->addItem(horizontalSpacer_delay);
+
+        comboBox_delay = new QComboBox(ios_row_delay);
+        comboBox_delay->addItem(QString());
+        comboBox_delay->addItem(QString());
+        comboBox_delay->addItem(QString());
+        comboBox_delay->addItem(QString());
+        comboBox_delay->addItem(QString());
+        comboBox_delay->addItem(QString());
+        comboBox_delay->setObjectName(QString::fromUtf8("comboBox_delay"));
+        sizePolicy.setHeightForWidth(comboBox_delay->sizePolicy().hasHeightForWidth());
+        comboBox_delay->setSizePolicy(sizePolicy);
+        comboBox_delay->setMinimumSize(QSize(150, 0));
+
+        ios_row_delay_layout->addWidget(comboBox_delay);
+
+        horizontalSpacer_14 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_delay_layout->addItem(horizontalSpacer_14);
+
+
+        card_digitalLayout->addWidget(ios_row_delay);
 
 
         verticalLayout_digital->addWidget(card_digital);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_2 = new QLabel(tab_digital);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        verticalSpacer_digital = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        horizontalLayout_2->addWidget(label_2);
-
-        pushButton_2 = new QPushButton(tab_digital);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-
-        horizontalLayout_2->addWidget(pushButton_2);
-
-
-        verticalLayout_digital->addLayout(horizontalLayout_2);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(tab_digital);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout->addWidget(label);
-
-        pushButton = new QPushButton(tab_digital);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        horizontalLayout->addWidget(pushButton);
-
-
-        verticalLayout_digital->addLayout(horizontalLayout);
+        verticalLayout_digital->addItem(verticalSpacer_digital);
 
         tabWidget_4->addTab(tab_digital, QString());
         tabWidget->addTab(tab6, QString());
@@ -453,14 +755,71 @@ public:
         pushButton_analogue_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 2", nullptr));
         pushButton_analogue_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 3", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_analogue), QCoreApplication::translate("MainWindow", "Analogue", nullptr));
-        description_digital->setText(QCoreApplication::translate("MainWindow", "Digital input configuration and monitoring", nullptr));
-        pushButton_digital_1->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 1", nullptr));
-        pushButton_digital_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 2", nullptr));
-        pushButton_digital_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 3", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        label_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_input->setText(QCoreApplication::translate("MainWindow", "Input", nullptr));
+        comboBox_input->setItemText(0, QCoreApplication::translate("MainWindow", "Digital Input 1", nullptr));
+        comboBox_input->setItemText(1, QCoreApplication::translate("MainWindow", "Digital Input 2", nullptr));
+        comboBox_input->setItemText(2, QCoreApplication::translate("MainWindow", "Digital Input 3", nullptr));
+
+        comboBox_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_input->setCurrentText(QCoreApplication::translate("MainWindow", "Digital Input 1", nullptr));
+        ios_separator1->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_function->setText(QCoreApplication::translate("MainWindow", "Function", nullptr));
+        comboBox_function->setItemText(0, QCoreApplication::translate("MainWindow", "Alarm", nullptr));
+        comboBox_function->setItemText(1, QCoreApplication::translate("MainWindow", "Warning", nullptr));
+        comboBox_function->setItemText(2, QCoreApplication::translate("MainWindow", "Status", nullptr));
+        comboBox_function->setItemText(3, QCoreApplication::translate("MainWindow", "Control", nullptr));
+
+        comboBox_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_function->setCurrentText(QCoreApplication::translate("MainWindow", "Alarm", nullptr));
+        ios_separator2->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_polarity->setText(QCoreApplication::translate("MainWindow", "Polarity", nullptr));
+        comboBox_polarity->setItemText(0, QCoreApplication::translate("MainWindow", "Normal", nullptr));
+        comboBox_polarity->setItemText(1, QCoreApplication::translate("MainWindow", "Inverted", nullptr));
+
+        comboBox_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_polarity->setCurrentText(QCoreApplication::translate("MainWindow", "Normal", nullptr));
+        ios_separator3->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_action->setText(QCoreApplication::translate("MainWindow", "Action", nullptr));
+        comboBox_action->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
+        comboBox_action->setItemText(1, QCoreApplication::translate("MainWindow", "Relay Output", nullptr));
+        comboBox_action->setItemText(2, QCoreApplication::translate("MainWindow", "Digital Output", nullptr));
+        comboBox_action->setItemText(3, QCoreApplication::translate("MainWindow", "Email Alert", nullptr));
+
+        comboBox_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_action->setCurrentText(QCoreApplication::translate("MainWindow", "None", nullptr));
+        ios_separator4->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_arming->setText(QCoreApplication::translate("MainWindow", "Arming", nullptr));
+        comboBox_arming->setItemText(0, QCoreApplication::translate("MainWindow", "Enabled", nullptr));
+        comboBox_arming->setItemText(1, QCoreApplication::translate("MainWindow", "Disabled", nullptr));
+
+        comboBox_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_arming->setCurrentText(QCoreApplication::translate("MainWindow", "Enabled", nullptr));
+        ios_separator5->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_lcd->setText(QCoreApplication::translate("MainWindow", "LCD Display", nullptr));
+        comboBox_lcd->setItemText(0, QCoreApplication::translate("MainWindow", "Show Status", nullptr));
+        comboBox_lcd->setItemText(1, QCoreApplication::translate("MainWindow", "Hide", nullptr));
+        comboBox_lcd->setItemText(2, QCoreApplication::translate("MainWindow", "Show Value", nullptr));
+
+        comboBox_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_lcd->setCurrentText(QCoreApplication::translate("MainWindow", "Show Status", nullptr));
+        ios_separator6->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_delay->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_delay->setText(QCoreApplication::translate("MainWindow", "Activation Delay", nullptr));
+        comboBox_delay->setItemText(0, QCoreApplication::translate("MainWindow", "0s", nullptr));
+        comboBox_delay->setItemText(1, QCoreApplication::translate("MainWindow", "1s", nullptr));
+        comboBox_delay->setItemText(2, QCoreApplication::translate("MainWindow", "2s", nullptr));
+        comboBox_delay->setItemText(3, QCoreApplication::translate("MainWindow", "5s", nullptr));
+        comboBox_delay->setItemText(4, QCoreApplication::translate("MainWindow", "10s", nullptr));
+        comboBox_delay->setItemText(5, QCoreApplication::translate("MainWindow", "30s", nullptr));
+
+        comboBox_delay->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #007aff; background: transparent; border: none;", nullptr));
+        comboBox_delay->setCurrentText(QCoreApplication::translate("MainWindow", "0s", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_digital), QCoreApplication::translate("MainWindow", "Digital", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab6), QCoreApplication::translate("MainWindow", "Inputs", nullptr));
         description7->setText(QCoreApplication::translate("MainWindow", "System monitoring and diagnostics", nullptr));

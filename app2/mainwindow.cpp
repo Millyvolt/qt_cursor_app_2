@@ -36,9 +36,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_analogue_2, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue2Clicked);
     connect(ui->pushButton_analogue_3, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue3Clicked);
     
-    connect(ui->pushButton_digital_1, &QPushButton::clicked, this, &MainWindow::onButtonDigital1Clicked);
-    connect(ui->pushButton_digital_2, &QPushButton::clicked, this, &MainWindow::onButtonDigital2Clicked);
-    connect(ui->pushButton_digital_3, &QPushButton::clicked, this, &MainWindow::onButtonDigital3Clicked);
+    connect(ui->comboBox_input, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxInputChanged);
+    connect(ui->comboBox_function, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxFunctionChanged);
+    connect(ui->comboBox_polarity, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxPolarityChanged);
+    connect(ui->comboBox_action, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxActionChanged);
+    connect(ui->comboBox_arming, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxArmingChanged);
+    connect(ui->comboBox_lcd, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxLcdChanged);
+    connect(ui->comboBox_delay, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxDelayChanged);
     
     connect(ui->pushButton7_1, &QPushButton::clicked, this, &MainWindow::onButton7_1Clicked);
     connect(ui->pushButton7_2, &QPushButton::clicked, this, &MainWindow::onButton7_2Clicked);
@@ -130,20 +134,40 @@ void MainWindow::onButtonAnalogue3Clicked()
     QMessageBox::information(this, "Analogue Input 3", "Configuring Analogue Input 3...");
 }
 
-// Button click handlers for Tab 6 (Inputs - Digital)
-void MainWindow::onButtonDigital1Clicked()
+// ComboBox change handlers for Tab 6 (Inputs - Digital)
+void MainWindow::onComboBoxInputChanged(const QString &text)
 {
-    QMessageBox::information(this, "Digital Input 1", "Configuring Digital Input 1...");
+    qDebug() << "Input changed to:" << text;
 }
 
-void MainWindow::onButtonDigital2Clicked()
+void MainWindow::onComboBoxFunctionChanged(const QString &text)
 {
-    QMessageBox::information(this, "Digital Input 2", "Configuring Digital Input 2...");
+    qDebug() << "Function changed to:" << text;
 }
 
-void MainWindow::onButtonDigital3Clicked()
+void MainWindow::onComboBoxPolarityChanged(const QString &text)
 {
-    QMessageBox::information(this, "Digital Input 3", "Configuring Digital Input 3...");
+    qDebug() << "Polarity changed to:" << text;
+}
+
+void MainWindow::onComboBoxActionChanged(const QString &text)
+{
+    qDebug() << "Action changed to:" << text;
+}
+
+void MainWindow::onComboBoxArmingChanged(const QString &text)
+{
+    qDebug() << "Arming changed to:" << text;
+}
+
+void MainWindow::onComboBoxLcdChanged(const QString &text)
+{
+    qDebug() << "LCD Display changed to:" << text;
+}
+
+void MainWindow::onComboBoxDelayChanged(const QString &text)
+{
+    qDebug() << "Activation Delay changed to:" << text;
 }
 
 // Button click handlers for Tab 7

@@ -36,10 +36,14 @@ private slots:
     void onButtonAnalogue2Clicked();
     void onButtonAnalogue3Clicked();
     
-    // Button click handlers for Tab 6 (Inputs - Digital)
-    void onButtonDigital1Clicked();
-    void onButtonDigital2Clicked();
-    void onButtonDigital3Clicked();
+    // ComboBox change handlers for Tab 6 (Inputs - Digital)
+    void onComboBoxInputChanged(const QString &text);
+    void onComboBoxFunctionChanged(const QString &text);
+    void onComboBoxPolarityChanged(const QString &text);
+    void onComboBoxActionChanged(const QString &text);
+    void onComboBoxArmingChanged(const QString &text);
+    void onComboBoxLcdChanged(const QString &text);
+    void onComboBoxDelayChanged(const QString &text);
     
     // Button click handlers for Tab 7
     void onButton7_1Clicked();
