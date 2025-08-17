@@ -133,7 +133,8 @@ QFrame#headerCard {
     padding: 24px;
 }
 
-QFrame#card1, QFrame#card2, QFrame#card3 {
+QFrame#card1, QFrame#card2, QFrame#card3, QFrame#card7,
+QFrame#card_digital, QFrame#card_analogue {
     background-color: white;
     border-radius: 16px;
     border: 1px solid #e5e5ea;

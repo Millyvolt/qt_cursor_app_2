@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -61,14 +62,40 @@ public:
     QPushButton *pushButton3_2;
     QPushButton *pushButton3_3;
     QSpacerItem *verticalSpacer_3;
-    QWidget *tab;
-    QTabWidget *tabWidget_2;
-    QWidget *tab_3;
-    QPushButton *pushButton;
-    QWidget *tab_4;
+    QWidget *tab6;
+    QTabWidget *tabWidget_4;
+    QWidget *tab_analogue;
+    QVBoxLayout *verticalLayout_analogue;
+    QFrame *card_analogue;
+    QVBoxLayout *card_analogueLayout;
+    QLabel *description_analogue;
+    QPushButton *pushButton_analogue_1;
+    QPushButton *pushButton_analogue_2;
+    QPushButton *pushButton_analogue_3;
+    QSpacerItem *verticalSpacer_analogue;
+    QWidget *tab_digital;
+    QVBoxLayout *verticalLayout_digital;
+    QFrame *card_digital;
+    QVBoxLayout *card_digitalLayout;
+    QLabel *description_digital;
+    QPushButton *pushButton_digital_1;
+    QPushButton *pushButton_digital_2;
+    QPushButton *pushButton_digital_3;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_2;
     QPushButton *pushButton_2;
-    QPushButton *pushButton1_4;
-    QWidget *tab_2;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QPushButton *pushButton;
+    QWidget *tab7;
+    QVBoxLayout *verticalLayout_6;
+    QFrame *card7;
+    QVBoxLayout *card7Layout;
+    QLabel *description7;
+    QPushButton *pushButton7_1;
+    QPushButton *pushButton7_2;
+    QPushButton *pushButton7_3;
+    QSpacerItem *verticalSpacer_5;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -76,7 +103,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(500, 772);
+        MainWindow->resize(800, 1000);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -225,37 +252,166 @@ public:
         verticalLayout_4->addItem(verticalSpacer_3);
 
         tabWidget->addTab(tab3, QString());
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        tabWidget_2 = new QTabWidget(tab);
-        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
-        tabWidget_2->setGeometry(QRect(-4, 9, 461, 251));
-        tab_3 = new QWidget();
-        tab_3->setObjectName(QString::fromUtf8("tab_3"));
-        pushButton = new QPushButton(tab_3);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(100, 80, 80, 27));
-        tabWidget_2->addTab(tab_3, QString());
-        tab_4 = new QWidget();
-        tab_4->setObjectName(QString::fromUtf8("tab_4"));
-        pushButton_2 = new QPushButton(tab_4);
+        tab6 = new QWidget();
+        tab6->setObjectName(QString::fromUtf8("tab6"));
+        tabWidget_4 = new QTabWidget(tab6);
+        tabWidget_4->setObjectName(QString::fromUtf8("tabWidget_4"));
+        tabWidget_4->setGeometry(QRect(0, 0, 760, 900));
+        tab_analogue = new QWidget();
+        tab_analogue->setObjectName(QString::fromUtf8("tab_analogue"));
+        verticalLayout_analogue = new QVBoxLayout(tab_analogue);
+        verticalLayout_analogue->setSpacing(16);
+        verticalLayout_analogue->setObjectName(QString::fromUtf8("verticalLayout_analogue"));
+        verticalLayout_analogue->setContentsMargins(20, 20, 20, 20);
+        card_analogue = new QFrame(tab_analogue);
+        card_analogue->setObjectName(QString::fromUtf8("card_analogue"));
+        card_analogueLayout = new QVBoxLayout(card_analogue);
+        card_analogueLayout->setObjectName(QString::fromUtf8("card_analogueLayout"));
+        description_analogue = new QLabel(card_analogue);
+        description_analogue->setObjectName(QString::fromUtf8("description_analogue"));
+        description_analogue->setAlignment(Qt::AlignCenter);
+        description_analogue->setWordWrap(true);
+
+        card_analogueLayout->addWidget(description_analogue);
+
+        pushButton_analogue_1 = new QPushButton(card_analogue);
+        pushButton_analogue_1->setObjectName(QString::fromUtf8("pushButton_analogue_1"));
+
+        card_analogueLayout->addWidget(pushButton_analogue_1);
+
+        pushButton_analogue_2 = new QPushButton(card_analogue);
+        pushButton_analogue_2->setObjectName(QString::fromUtf8("pushButton_analogue_2"));
+
+        card_analogueLayout->addWidget(pushButton_analogue_2);
+
+        pushButton_analogue_3 = new QPushButton(card_analogue);
+        pushButton_analogue_3->setObjectName(QString::fromUtf8("pushButton_analogue_3"));
+
+        card_analogueLayout->addWidget(pushButton_analogue_3);
+
+
+        verticalLayout_analogue->addWidget(card_analogue);
+
+        verticalSpacer_analogue = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_analogue->addItem(verticalSpacer_analogue);
+
+        tabWidget_4->addTab(tab_analogue, QString());
+        tab_digital = new QWidget();
+        tab_digital->setObjectName(QString::fromUtf8("tab_digital"));
+        verticalLayout_digital = new QVBoxLayout(tab_digital);
+        verticalLayout_digital->setSpacing(16);
+        verticalLayout_digital->setObjectName(QString::fromUtf8("verticalLayout_digital"));
+        verticalLayout_digital->setContentsMargins(20, 20, 20, 20);
+        card_digital = new QFrame(tab_digital);
+        card_digital->setObjectName(QString::fromUtf8("card_digital"));
+        card_digitalLayout = new QVBoxLayout(card_digital);
+        card_digitalLayout->setObjectName(QString::fromUtf8("card_digitalLayout"));
+        description_digital = new QLabel(card_digital);
+        description_digital->setObjectName(QString::fromUtf8("description_digital"));
+        description_digital->setAlignment(Qt::AlignCenter);
+        description_digital->setWordWrap(true);
+
+        card_digitalLayout->addWidget(description_digital);
+
+        pushButton_digital_1 = new QPushButton(card_digital);
+        pushButton_digital_1->setObjectName(QString::fromUtf8("pushButton_digital_1"));
+
+        card_digitalLayout->addWidget(pushButton_digital_1);
+
+        pushButton_digital_2 = new QPushButton(card_digital);
+        pushButton_digital_2->setObjectName(QString::fromUtf8("pushButton_digital_2"));
+
+        card_digitalLayout->addWidget(pushButton_digital_2);
+
+        pushButton_digital_3 = new QPushButton(card_digital);
+        pushButton_digital_3->setObjectName(QString::fromUtf8("pushButton_digital_3"));
+
+        card_digitalLayout->addWidget(pushButton_digital_3);
+
+
+        verticalLayout_digital->addWidget(card_digital);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label_2 = new QLabel(tab_digital);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        pushButton_2 = new QPushButton(tab_digital);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(120, 80, 80, 27));
-        pushButton1_4 = new QPushButton(tab_4);
-        pushButton1_4->setObjectName(QString::fromUtf8("pushButton1_4"));
-        pushButton1_4->setGeometry(QRect(40, 40, 396, 27));
-        tabWidget_2->addTab(tab_4, QString());
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+
+        horizontalLayout_2->addWidget(pushButton_2);
+
+
+        verticalLayout_digital->addLayout(horizontalLayout_2);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(tab_digital);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        pushButton = new QPushButton(tab_digital);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
+
+
+        verticalLayout_digital->addLayout(horizontalLayout);
+
+        tabWidget_4->addTab(tab_digital, QString());
+        tabWidget->addTab(tab6, QString());
+        tab7 = new QWidget();
+        tab7->setObjectName(QString::fromUtf8("tab7"));
+        verticalLayout_6 = new QVBoxLayout(tab7);
+        verticalLayout_6->setSpacing(16);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(20, 20, 20, 20);
+        card7 = new QFrame(tab7);
+        card7->setObjectName(QString::fromUtf8("card7"));
+        card7->setFrameShape(QFrame::NoFrame);
+        card7Layout = new QVBoxLayout(card7);
+        card7Layout->setObjectName(QString::fromUtf8("card7Layout"));
+        description7 = new QLabel(card7);
+        description7->setObjectName(QString::fromUtf8("description7"));
+        description7->setAlignment(Qt::AlignCenter);
+        description7->setWordWrap(true);
+
+        card7Layout->addWidget(description7);
+
+        pushButton7_1 = new QPushButton(card7);
+        pushButton7_1->setObjectName(QString::fromUtf8("pushButton7_1"));
+
+        card7Layout->addWidget(pushButton7_1);
+
+        pushButton7_2 = new QPushButton(card7);
+        pushButton7_2->setObjectName(QString::fromUtf8("pushButton7_2"));
+
+        card7Layout->addWidget(pushButton7_2);
+
+        pushButton7_3 = new QPushButton(card7);
+        pushButton7_3->setObjectName(QString::fromUtf8("pushButton7_3"));
+
+        card7Layout->addWidget(pushButton7_3);
+
+
+        verticalLayout_6->addWidget(card7);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_6->addItem(verticalSpacer_5);
+
+        tabWidget->addTab(tab7, QString());
 
         verticalLayout->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 500, 25));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         menubar->setVisible(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
@@ -266,7 +422,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(3);
-        tabWidget_2->setCurrentIndex(1);
+        tabWidget_4->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -275,30 +431,43 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "iOS Style Qt Application", nullptr));
-        titleLabel->setText(QCoreApplication::translate("MainWindow", "App Dashboard", nullptr));
-        subtitleLabel->setText(QCoreApplication::translate("MainWindow", "Navigate through different app sections", nullptr));
+        titleLabel->setText(QCoreApplication::translate("MainWindow", "KMZ Configuration Suite v1.0", nullptr));
+        subtitleLabel->setText(QCoreApplication::translate("MainWindow", "Interface friendly to Wasyans", nullptr));
         description1->setText(QCoreApplication::translate("MainWindow", "Essential system apps and settings", nullptr));
         pushButton1_1->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         pushButton1_2->setText(QCoreApplication::translate("MainWindow", "Messages", nullptr));
         pushButton1_3->setText(QCoreApplication::translate("MainWindow", "Phone", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab1), QCoreApplication::translate("MainWindow", "Ho               me", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab1), QCoreApplication::translate("MainWindow", "Settings", nullptr));
         description2->setText(QCoreApplication::translate("MainWindow", "Entertainment and media applications", nullptr));
         pushButton2_1->setText(QCoreApplication::translate("MainWindow", "\360\237\216\265 Music", nullptr));
         pushButton2_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\267 Camera", nullptr));
         pushButton2_3->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 Safari", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab2), QCoreApplication::translate("MainWindow", "Apps", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab2), QCoreApplication::translate("MainWindow", "Generator", nullptr));
         description3->setText(QCoreApplication::translate("MainWindow", "Utility and productivity tools", nullptr));
         pushButton3_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Calculator", nullptr));
         pushButton3_2->setText(QCoreApplication::translate("MainWindow", "\342\217\260 Clock", nullptr));
         pushButton3_3->setText(QCoreApplication::translate("MainWindow", "\360\237\227\202\357\270\217 Files", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab3), QCoreApplication::translate("MainWindow", "Tools", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab3), QCoreApplication::translate("MainWindow", "Mains", nullptr));
+        description_analogue->setText(QCoreApplication::translate("MainWindow", "Analogue input configuration and monitoring", nullptr));
+        pushButton_analogue_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 1", nullptr));
+        pushButton_analogue_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 2", nullptr));
+        pushButton_analogue_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Analogue Input 3", nullptr));
+        tabWidget_4->setTabText(tabWidget_4->indexOf(tab_analogue), QCoreApplication::translate("MainWindow", "Analogue", nullptr));
+        description_digital->setText(QCoreApplication::translate("MainWindow", "Digital input configuration and monitoring", nullptr));
+        pushButton_digital_1->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 1", nullptr));
+        pushButton_digital_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 2", nullptr));
+        pushButton_digital_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Digital Input 3", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton1_4->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Page4", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Page 5", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        tabWidget_4->setTabText(tabWidget_4->indexOf(tab_digital), QCoreApplication::translate("MainWindow", "Digital", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab6), QCoreApplication::translate("MainWindow", "Inputs", nullptr));
+        description7->setText(QCoreApplication::translate("MainWindow", "System monitoring and diagnostics", nullptr));
+        pushButton7_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\210 Monitoring", nullptr));
+        pushButton7_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\215 Diagnostics", nullptr));
+        pushButton7_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\213 Reports", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab7), QCoreApplication::translate("MainWindow", "Outputs", nullptr));
     } // retranslateUi
 
 };

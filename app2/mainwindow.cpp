@@ -31,6 +31,18 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton3_1, &QPushButton::clicked, this, &MainWindow::onButton3_1Clicked);
     connect(ui->pushButton3_2, &QPushButton::clicked, this, &MainWindow::onButton3_2Clicked);
     connect(ui->pushButton3_3, &QPushButton::clicked, this, &MainWindow::onButton3_3Clicked);
+    
+    connect(ui->pushButton_analogue_1, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue1Clicked);
+    connect(ui->pushButton_analogue_2, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue2Clicked);
+    connect(ui->pushButton_analogue_3, &QPushButton::clicked, this, &MainWindow::onButtonAnalogue3Clicked);
+    
+    connect(ui->pushButton_digital_1, &QPushButton::clicked, this, &MainWindow::onButtonDigital1Clicked);
+    connect(ui->pushButton_digital_2, &QPushButton::clicked, this, &MainWindow::onButtonDigital2Clicked);
+    connect(ui->pushButton_digital_3, &QPushButton::clicked, this, &MainWindow::onButtonDigital3Clicked);
+    
+    connect(ui->pushButton7_1, &QPushButton::clicked, this, &MainWindow::onButton7_1Clicked);
+    connect(ui->pushButton7_2, &QPushButton::clicked, this, &MainWindow::onButton7_2Clicked);
+    connect(ui->pushButton7_3, &QPushButton::clicked, this, &MainWindow::onButton7_3Clicked);
 }
 
 MainWindow::~MainWindow()
@@ -100,5 +112,53 @@ void MainWindow::onButton3_2Clicked()
 void MainWindow::onButton3_3Clicked()
 {
     QMessageBox::information(this, "Files", "Opening Files app...");
+}
+
+// Button click handlers for Tab 6 (Inputs - Analogue)
+void MainWindow::onButtonAnalogue1Clicked()
+{
+    QMessageBox::information(this, "Analogue Input 1", "Configuring Analogue Input 1...");
+}
+
+void MainWindow::onButtonAnalogue2Clicked()
+{
+    QMessageBox::information(this, "Analogue Input 2", "Configuring Analogue Input 2...");
+}
+
+void MainWindow::onButtonAnalogue3Clicked()
+{
+    QMessageBox::information(this, "Analogue Input 3", "Configuring Analogue Input 3...");
+}
+
+// Button click handlers for Tab 6 (Inputs - Digital)
+void MainWindow::onButtonDigital1Clicked()
+{
+    QMessageBox::information(this, "Digital Input 1", "Configuring Digital Input 1...");
+}
+
+void MainWindow::onButtonDigital2Clicked()
+{
+    QMessageBox::information(this, "Digital Input 2", "Configuring Digital Input 2...");
+}
+
+void MainWindow::onButtonDigital3Clicked()
+{
+    QMessageBox::information(this, "Digital Input 3", "Configuring Digital Input 3...");
+}
+
+// Button click handlers for Tab 7
+void MainWindow::onButton7_1Clicked()
+{
+    QMessageBox::information(this, "Monitoring", "Opening System Monitoring...");
+}
+
+void MainWindow::onButton7_2Clicked()
+{
+    QMessageBox::information(this, "Diagnostics", "Opening Diagnostics...");
+}
+
+void MainWindow::onButton7_3Clicked()
+{
+    QMessageBox::information(this, "Reports", "Opening Reports...");
 }
 

@@ -30,6 +30,21 @@ private slots:
     void onButton3_1Clicked();
     void onButton3_2Clicked();
     void onButton3_3Clicked();
+    
+    // Button click handlers for Tab 6 (Inputs - Analogue)
+    void onButtonAnalogue1Clicked();
+    void onButtonAnalogue2Clicked();
+    void onButtonAnalogue3Clicked();
+    
+    // Button click handlers for Tab 6 (Inputs - Digital)
+    void onButtonDigital1Clicked();
+    void onButtonDigital2Clicked();
+    void onButtonDigital3Clicked();
+    
+    // Button click handlers for Tab 7
+    void onButton7_1Clicked();
+    void onButton7_2Clicked();
+    void onButton7_3Clicked();
 
 private:
     void loadStylesheet();
