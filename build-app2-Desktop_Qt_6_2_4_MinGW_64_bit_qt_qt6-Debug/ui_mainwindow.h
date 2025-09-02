@@ -193,6 +193,26 @@ public:
     QPushButton *pushButton_rs232_2;
     QPushButton *pushButton_rs232_3;
     QSpacerItem *verticalSpacer_rs232;
+    QWidget *tab9;
+    QTabWidget *tabWidget_modbus;
+    QWidget *tab_tcp;
+    QVBoxLayout *verticalLayout_tcp;
+    QFrame *card_tcp;
+    QVBoxLayout *card_tcpLayout;
+    QLabel *description_tcp;
+    QPushButton *pushButton_tcp_1;
+    QPushButton *pushButton_tcp_2;
+    QPushButton *pushButton_tcp_3;
+    QSpacerItem *verticalSpacer_tcp;
+    QWidget *tab_rtu;
+    QVBoxLayout *verticalLayout_rtu;
+    QFrame *card_rtu;
+    QVBoxLayout *card_rtuLayout;
+    QLabel *description_rtu;
+    QPushButton *pushButton_rtu_1;
+    QPushButton *pushButton_rtu_2;
+    QPushButton *pushButton_rtu_3;
+    QSpacerItem *verticalSpacer_rtu;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -1001,13 +1021,117 @@ public:
 
         tabWidget_5->addTab(tab_rs232, QString());
         tabWidget->addTab(tab8, QString());
+        tab9 = new QWidget();
+        tab9->setObjectName(QString::fromUtf8("tab9"));
+        tabWidget_modbus = new QTabWidget(tab9);
+        tabWidget_modbus->setObjectName(QString::fromUtf8("tabWidget_modbus"));
+        tabWidget_modbus->setGeometry(QRect(0, 9, 961, 891));
+        tab_tcp = new QWidget();
+        tab_tcp->setObjectName(QString::fromUtf8("tab_tcp"));
+        verticalLayout_tcp = new QVBoxLayout(tab_tcp);
+        verticalLayout_tcp->setSpacing(16);
+        verticalLayout_tcp->setObjectName(QString::fromUtf8("verticalLayout_tcp"));
+        verticalLayout_tcp->setContentsMargins(20, 20, 20, 20);
+        card_tcp = new QFrame(tab_tcp);
+        card_tcp->setObjectName(QString::fromUtf8("card_tcp"));
+        card_tcp->setStyleSheet(QString::fromUtf8(""));
+        card_tcp->setFrameShape(QFrame::StyledPanel);
+        card_tcp->setFrameShadow(QFrame::Raised);
+        card_tcpLayout = new QVBoxLayout(card_tcp);
+        card_tcpLayout->setSpacing(12);
+        card_tcpLayout->setObjectName(QString::fromUtf8("card_tcpLayout"));
+        card_tcpLayout->setContentsMargins(16, 16, 16, 16);
+        description_tcp = new QLabel(card_tcp);
+        description_tcp->setObjectName(QString::fromUtf8("description_tcp"));
+        description_tcp->setStyleSheet(QString::fromUtf8("font-size: 16px; color: #1d1d1f; font-weight: 500;"));
+        description_tcp->setAlignment(Qt::AlignCenter);
+        description_tcp->setWordWrap(true);
+
+        card_tcpLayout->addWidget(description_tcp);
+
+        pushButton_tcp_1 = new QPushButton(card_tcp);
+        pushButton_tcp_1->setObjectName(QString::fromUtf8("pushButton_tcp_1"));
+        pushButton_tcp_1->setStyleSheet(QString::fromUtf8(""));
+
+        card_tcpLayout->addWidget(pushButton_tcp_1);
+
+        pushButton_tcp_2 = new QPushButton(card_tcp);
+        pushButton_tcp_2->setObjectName(QString::fromUtf8("pushButton_tcp_2"));
+        pushButton_tcp_2->setStyleSheet(QString::fromUtf8(""));
+
+        card_tcpLayout->addWidget(pushButton_tcp_2);
+
+        pushButton_tcp_3 = new QPushButton(card_tcp);
+        pushButton_tcp_3->setObjectName(QString::fromUtf8("pushButton_tcp_3"));
+        pushButton_tcp_3->setStyleSheet(QString::fromUtf8(""));
+
+        card_tcpLayout->addWidget(pushButton_tcp_3);
+
+
+        verticalLayout_tcp->addWidget(card_tcp);
+
+        verticalSpacer_tcp = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_tcp->addItem(verticalSpacer_tcp);
+
+        tabWidget_modbus->addTab(tab_tcp, QString());
+        tab_rtu = new QWidget();
+        tab_rtu->setObjectName(QString::fromUtf8("tab_rtu"));
+        verticalLayout_rtu = new QVBoxLayout(tab_rtu);
+        verticalLayout_rtu->setSpacing(16);
+        verticalLayout_rtu->setObjectName(QString::fromUtf8("verticalLayout_rtu"));
+        verticalLayout_rtu->setContentsMargins(20, 20, 20, 20);
+        card_rtu = new QFrame(tab_rtu);
+        card_rtu->setObjectName(QString::fromUtf8("card_rtu"));
+        card_rtu->setStyleSheet(QString::fromUtf8(""));
+        card_rtu->setFrameShape(QFrame::StyledPanel);
+        card_rtu->setFrameShadow(QFrame::Raised);
+        card_rtuLayout = new QVBoxLayout(card_rtu);
+        card_rtuLayout->setSpacing(12);
+        card_rtuLayout->setObjectName(QString::fromUtf8("card_rtuLayout"));
+        card_rtuLayout->setContentsMargins(16, 16, 16, 16);
+        description_rtu = new QLabel(card_rtu);
+        description_rtu->setObjectName(QString::fromUtf8("description_rtu"));
+        description_rtu->setStyleSheet(QString::fromUtf8("font-size: 16px; color: #1d1d1f; font-weight: 500;"));
+        description_rtu->setAlignment(Qt::AlignCenter);
+        description_rtu->setWordWrap(true);
+
+        card_rtuLayout->addWidget(description_rtu);
+
+        pushButton_rtu_1 = new QPushButton(card_rtu);
+        pushButton_rtu_1->setObjectName(QString::fromUtf8("pushButton_rtu_1"));
+        pushButton_rtu_1->setStyleSheet(QString::fromUtf8(""));
+
+        card_rtuLayout->addWidget(pushButton_rtu_1);
+
+        pushButton_rtu_2 = new QPushButton(card_rtu);
+        pushButton_rtu_2->setObjectName(QString::fromUtf8("pushButton_rtu_2"));
+        pushButton_rtu_2->setStyleSheet(QString::fromUtf8(""));
+
+        card_rtuLayout->addWidget(pushButton_rtu_2);
+
+        pushButton_rtu_3 = new QPushButton(card_rtu);
+        pushButton_rtu_3->setObjectName(QString::fromUtf8("pushButton_rtu_3"));
+        pushButton_rtu_3->setStyleSheet(QString::fromUtf8(""));
+
+        card_rtuLayout->addWidget(pushButton_rtu_3);
+
+
+        verticalLayout_rtu->addWidget(card_rtu);
+
+        verticalSpacer_rtu = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_rtu->addItem(verticalSpacer_rtu);
+
+        tabWidget_modbus->addTab(tab_rtu, QString());
+        tabWidget->addTab(tab9, QString());
 
         verticalLayout->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1000, 25));
+        menubar->setGeometry(QRect(0, 0, 1000, 22));
         menubar->setVisible(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
@@ -1017,9 +1141,10 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(5);
         tabWidget_4->setCurrentIndex(1);
-        tabWidget_5->setCurrentIndex(1);
+        tabWidget_5->setCurrentIndex(0);
+        tabWidget_modbus->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1146,6 +1271,20 @@ public:
         pushButton_rs232_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Flow Control", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs232), QCoreApplication::translate("MainWindow", "RS-232", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab8), QCoreApplication::translate("MainWindow", "Communications", nullptr));
+        description_tcp->setText(QCoreApplication::translate("MainWindow", "MODBUS TCP communication configuration", nullptr));
+        pushButton_tcp_1->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 IP Address", nullptr));
+        pushButton_tcp_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Port Number", nullptr));
+        pushButton_tcp_3->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Connection Settings", nullptr));
+        tabWidget_modbus->setTabText(tabWidget_modbus->indexOf(tab_tcp), QCoreApplication::translate("MainWindow", "TCP", nullptr));
+#if QT_CONFIG(whatsthis)
+        card_rtu->setWhatsThis(QCoreApplication::translate("MainWindow", "q", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        description_rtu->setText(QCoreApplication::translate("MainWindow", "MODBUS RTU serial communication configuration", nullptr));
+        pushButton_rtu_1->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Serial Port", nullptr));
+        pushButton_rtu_2->setText(QCoreApplication::translate("MainWindow", "\360\237\223\212 Baud Rate", nullptr));
+        pushButton_rtu_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Data Format", nullptr));
+        tabWidget_modbus->setTabText(tabWidget_modbus->indexOf(tab_rtu), QCoreApplication::translate("MainWindow", "RTU", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab9), QCoreApplication::translate("MainWindow", "MODBUS", nullptr));
     } // retranslateUi
 
 };

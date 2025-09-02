@@ -68,6 +68,11 @@ private slots:
     void onButtonRs232_1Clicked();
     void onButtonRs232_2Clicked();
     void onButtonRs232_3Clicked();
+    
+    // Button click handlers for Tab 9 (MODBUS)
+    void onButtonModbus_1Clicked();
+    void onButtonModbus_2Clicked();
+    void onButtonModbus_3Clicked();
 
 private:
     void loadStylesheet();

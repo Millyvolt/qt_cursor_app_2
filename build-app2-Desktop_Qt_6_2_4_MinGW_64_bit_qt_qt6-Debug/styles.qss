@@ -135,7 +135,7 @@ QFrame#headerCard {
 
 QFrame#card1, QFrame#card2, QFrame#card3, QFrame#card7, QFrame#card8,
 QFrame#card_digital, QFrame#card_analogue, QFrame#card_rs485, QFrame#card_can,
-QFrame#card_ethernet, QFrame#card_rs232 {
+QFrame#card_ethernet, QFrame#card_rs232, QFrame#card_rtu, QFrame#card_tcp {
     background-color: white;
     border-radius: 16px;
     border: 1px solid #e5e5ea;

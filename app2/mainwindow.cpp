@@ -62,6 +62,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_rs232_1, &QPushButton::clicked, this, &MainWindow::onButtonRs232_1Clicked);
     connect(ui->pushButton_rs232_2, &QPushButton::clicked, this, &MainWindow::onButtonRs232_2Clicked);
     connect(ui->pushButton_rs232_3, &QPushButton::clicked, this, &MainWindow::onButtonRs232_3Clicked);
+    
+//    connect(ui->pushButton_modbus_1, &QPushButton::clicked, this, &MainWindow::onButtonModbus_1Clicked);
+//    connect(ui->pushButton_modbus_2, &QPushButton::clicked, this, &MainWindow::onButtonModbus_2Clicked);
+//    connect(ui->pushButton_modbus_3, &QPushButton::clicked, this, &MainWindow::onButtonModbus_3Clicked);
 }
 
 MainWindow::~MainWindow()
@@ -258,5 +262,21 @@ void MainWindow::onButtonRs232_2Clicked()
 void MainWindow::onButtonRs232_3Clicked()
 {
     QMessageBox::information(this, "Flow Control", "Opening RS-232 Flow Control Settings...");
+}
+
+// Button click handlers for Tab 9 (MODBUS)
+void MainWindow::onButtonModbus_1Clicked()
+{
+    QMessageBox::information(this, "Protocol Settings", "Opening MODBUS Protocol Settings...");
+}
+
+void MainWindow::onButtonModbus_2Clicked()
+{
+    QMessageBox::information(this, "Register Configuration", "Opening MODBUS Register Configuration...");
+}
+
+void MainWindow::onButtonModbus_3Clicked()
+{
+    QMessageBox::information(this, "Device Address", "Opening MODBUS Device Address Configuration...");
 }
 
