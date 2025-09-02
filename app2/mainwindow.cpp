@@ -19,22 +19,39 @@ MainWindow::MainWindow(QWidget *parent)
     // Load external stylesheet
     loadStylesheet();
     
-    // Connect all buttons to their respective slots
+    ui->comboBox_rs_RS->addItems({"RS-485 1", "RS-485 2", "RS-232"});
+    ui->comboBox_rs_Port->addItems({"COM 1", "COM 2", "COM 3"});
+    ui->comboBox_rs_BaudRate->addItems({"9600", "56000", "115200"});
+    ui->comboBox_rs_DataBits->addItems({"8 Data Bits", "7 Data Bits"});
+    ui->comboBox_rs_Parity->addItems({"None", "Even", "Odd"});
+    ui->comboBox_rs_StopBits->addItems({"1 Stop Bit", "2 Stop Bits"});
+
+
+    setConnections();   // Connect all buttons to their respective slots
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::setConnections()
+{
     connect(ui->pushButton1_1, &QPushButton::clicked, this, &MainWindow::onButton1_1Clicked);
     connect(ui->pushButton1_2, &QPushButton::clicked, this, &MainWindow::onButton1_2Clicked);
     connect(ui->pushButton1_3, &QPushButton::clicked, this, &MainWindow::onButton1_3Clicked);
-    
+
     connect(ui->pushButton2_1, &QPushButton::clicked, this, &MainWindow::onButton2_1Clicked);
     connect(ui->pushButton2_2, &QPushButton::clicked, this, &MainWindow::onButton2_2Clicked);
     connect(ui->pushButton2_3, &QPushButton::clicked, this, &MainWindow::onButton2_3Clicked);
-    
+
     connect(ui->pushButton3_1, &QPushButton::clicked, this, &MainWindow::onButton3_1Clicked);
     connect(ui->pushButton3_2, &QPushButton::clicked, this, &MainWindow::onButton3_2Clicked);
     connect(ui->pushButton3_3, &QPushButton::clicked, this, &MainWindow::onButton3_3Clicked);
-    
+
     connect(ui->comboBox_analogue_input, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxAnalogueInputChanged);
     connect(ui->comboBox_analogue_function, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxAnalogueFunctionChanged);
-    
+
     connect(ui->comboBox_input, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxInputChanged);
     connect(ui->comboBox_function, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxFunctionChanged);
     connect(ui->comboBox_polarity, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxPolarityChanged);
@@ -42,35 +59,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->comboBox_arming, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxArmingChanged);
     connect(ui->comboBox_lcd, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxLcdChanged);
     connect(ui->comboBox_delay, QOverload<const QString &>::of(&QComboBox::currentTextChanged), this, &MainWindow::onComboBoxDelayChanged);
-    
+
     connect(ui->pushButton7_1, &QPushButton::clicked, this, &MainWindow::onButton7_1Clicked);
     connect(ui->pushButton7_2, &QPushButton::clicked, this, &MainWindow::onButton7_2Clicked);
     connect(ui->pushButton7_3, &QPushButton::clicked, this, &MainWindow::onButton7_3Clicked);
-    
-    connect(ui->pushButton_rs485_1, &QPushButton::clicked, this, &MainWindow::onButtonRs485_1Clicked);
-    connect(ui->pushButton_rs485_2, &QPushButton::clicked, this, &MainWindow::onButtonRs485_2Clicked);
-    connect(ui->pushButton_rs485_3, &QPushButton::clicked, this, &MainWindow::onButtonRs485_3Clicked);
-    
+
     connect(ui->pushButton_can_1, &QPushButton::clicked, this, &MainWindow::onButtonCan_1Clicked);
     connect(ui->pushButton_can_2, &QPushButton::clicked, this, &MainWindow::onButtonCan_2Clicked);
     connect(ui->pushButton_can_3, &QPushButton::clicked, this, &MainWindow::onButtonCan_3Clicked);
-    
-//    connect(ui->pushButton_ethernet_1, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_1Clicked);
-//    connect(ui->pushButton_ethernet_2, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_2Clicked);
-//    connect(ui->pushButton_ethernet_3, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_3Clicked);
-    
-    connect(ui->pushButton_rs232_1, &QPushButton::clicked, this, &MainWindow::onButtonRs232_1Clicked);
-    connect(ui->pushButton_rs232_2, &QPushButton::clicked, this, &MainWindow::onButtonRs232_2Clicked);
-    connect(ui->pushButton_rs232_3, &QPushButton::clicked, this, &MainWindow::onButtonRs232_3Clicked);
-    
-//    connect(ui->pushButton_modbus_1, &QPushButton::clicked, this, &MainWindow::onButtonModbus_1Clicked);
-//    connect(ui->pushButton_modbus_2, &QPushButton::clicked, this, &MainWindow::onButtonModbus_2Clicked);
-//    connect(ui->pushButton_modbus_3, &QPushButton::clicked, this, &MainWindow::onButtonModbus_3Clicked);
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
 }
 
 void MainWindow::loadStylesheet()

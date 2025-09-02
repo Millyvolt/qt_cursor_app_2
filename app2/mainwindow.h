@@ -74,6 +74,8 @@ private slots:
     void onButtonModbus_2Clicked();
     void onButtonModbus_3Clicked();
 
+    void setConnections();
+
 private:
     void loadStylesheet();
     Ui::MainWindow *ui;

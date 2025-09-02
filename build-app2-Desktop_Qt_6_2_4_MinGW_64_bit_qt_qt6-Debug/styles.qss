@@ -148,17 +148,19 @@ QFrame#ios_row_input, QFrame#ios_row_function, QFrame#ios_row_polarity,
 QFrame#ios_row_action, QFrame#ios_row_arming, QFrame#ios_row_lcd, QFrame#ios_row_delay,
 QFrame#ios_row_analogue_input, QFrame#ios_row_analogue_function,
 QFrame#ios_row_ethernet_ip, QFrame#ios_row_ethernet_port, QFrame#ios_row_ethernet_timeout,
-QFrame#ios_row_ethernet_iptype {
+QFrame#ios_row_ethernet_iptype, QFrame#ios_row_rs485_input {
     background-color: white;
     border: none;
     min-height: 44px;
 }
 
+/*
 QFrame#ios_row_input:hover, QFrame#ios_row_function:hover, QFrame#ios_row_polarity:hover,
 QFrame#ios_row_action:hover, QFrame#ios_row_arming:hover, QFrame#ios_row_lcd:hover, QFrame#ios_row_delay:hover,
 QFrame#ios_row_analogue_input:hover, QFrame#ios_row_analogue_function:hover {
     background-color: #f2f2f7;
 }
+*/
 
 QFrame#ios_separator1, QFrame#ios_separator2, QFrame#ios_separator3,
 QFrame#ios_separator4, QFrame#ios_separator5, QFrame#ios_separator6 {

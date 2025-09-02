@@ -1503,15 +1503,9 @@
          </rect>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_rs485">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
          <attribute name="title">
           <string>RS-485</string>
          </attribute>
@@ -1534,38 +1528,795 @@
           <item>
            <widget class="QFrame" name="card_rs485">
             <layout class="QVBoxLayout" name="card_rs485Layout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
-              <widget class="QLabel" name="description_rs485">
-               <property name="text">
-                <string>RS-485 communication configuration</string>
+              <widget class="QFrame" name="ios_row_rs485_input">
+               <layout class="QHBoxLayout" name="ios_row_rs485_input_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_input">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>RS</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_input">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_RS">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_1">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
                </property>
-               <property name="wordWrap">
-                <bool>true</bool>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_rs485_1">
-               <property name="text">
-                <string>⚙️ Baud Rate Settings</string>
+              <widget class="QFrame" name="ios_row_rs485_function">
+               <layout class="QHBoxLayout" name="ios_row_rs485_function_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_function">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Port</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_function">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_Port">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_2">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_rs485_2">
-               <property name="text">
-                <string>🔧 Protocol Configuration</string>
+              <widget class="QFrame" name="ios_row_rs485_polarity">
+               <layout class="QHBoxLayout" name="ios_row_rs485_polarity_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_polarity">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Baud Rate</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_polarity">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_BaudRate">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_3">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_rs485_3">
-               <property name="text">
-                <string>📊 Device Address</string>
+              <widget class="QFrame" name="ios_row_rs485_action">
+               <layout class="QHBoxLayout" name="ios_row_rs485_action_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_action">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Data Bits</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_action">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_DataBits">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_11">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_4">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_row_rs485_arming">
+               <layout class="QHBoxLayout" name="ios_row_rs485_arming_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_arming">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Parity</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_arming">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_Parity">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_12">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_5">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_row_rs485_lcd">
+               <layout class="QHBoxLayout" name="ios_row_rs485_lcd_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_lcd">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Stop Bits</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_lcd">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs_StopBits">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_13">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs485_6">
+               <property name="styleSheet">
+                <string>background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_row_rs485_delay">
+               <layout class="QHBoxLayout" name="ios_row_rs485_delay_layout">
+                <property name="leftMargin">
+                 <number>16</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>16</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs485_delay">
+                  <property name="styleSheet">
+                   <string>font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Timeout</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_delay">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs485_delay">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>150</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="currentText">
+                   <string>0s</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>0s</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1s</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2s</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>5s</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>10s</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>30s</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs485_14">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -1725,25 +2476,10 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="ios_row_ethernet_ip">
-               <layout class="QHBoxLayout" name="ios_row_ethernet_ipLayout">
-                <property name="leftMargin">
-                 <number>16</number>
-                </property>
-                <property name="topMargin">
-                 <number>12</number>
-                </property>
-                <property name="rightMargin">
-                 <number>16</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>12</number>
-                </property>
-                <property name="minimumHeight" stdset="0">
-                 <number>44</number>
-                </property>
+              <widget class="QFrame" name="ios_row_ethernet_input">
+               <layout class="QHBoxLayout" name="ios_row_ethernet_inputLayout">
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_ip">
+                 <spacer name="horizontalSpacer_ethernet_input">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1759,17 +2495,17 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_ethernet_ip">
+                 <widget class="QLabel" name="label_ethernet_input">
                   <property name="styleSheet">
-                   <string notr="true"/>
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>IP Address</string>
+                   <string>Input</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_ip2">
+                 <spacer name="horizontalSpacer_ethernet_input2">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1782,217 +2518,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_ethernet_ip">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>192.168.1.100</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Enter IP address</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_ip3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>100</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="ios_separator_ethernet1">
-               <property name="styleSheet">
-                <string notr="true">background-color: #e5e5ea; border: none; max-height: 1px;</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::HLine</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Sunken</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="ios_row_ethernet_port">
-               <layout class="QHBoxLayout" name="ios_row_ethernet_portLayout">
-                <property name="leftMargin">
-                 <number>16</number>
-                </property>
-                <property name="topMargin">
-                 <number>12</number>
-                </property>
-                <property name="rightMargin">
-                 <number>16</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>12</number>
-                </property>
-                <property name="minimumHeight" stdset="0">
-                 <number>44</number>
-                </property>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_port">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>100</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_ethernet_port">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>Port</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_port2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_ethernet_port">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>502</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Enter port number</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_port3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>100</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="ios_separator_ethernet2">
-               <property name="styleSheet">
-                <string notr="true">background-color: #e5e5ea; border: none; max-height: 1px;</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::HLine</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Sunken</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="ios_row_ethernet_iptype">
-               <layout class="QHBoxLayout" name="ios_row_ethernet_iptypeLayout">
-                <property name="leftMargin">
-                 <number>16</number>
-                </property>
-                <property name="topMargin">
-                 <number>12</number>
-                </property>
-                <property name="rightMargin">
-                 <number>16</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>12</number>
-                </property>
-                <property name="minimumHeight" stdset="0">
-                 <number>44</number>
-                </property>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_iptype">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>100</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_ethernet_iptype">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>IP Type</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_ethernet_iptype2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboBox_ethernet_iptype">
+                 <widget class="QComboBox" name="comboBox_ethernet_input">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -2004,23 +2530,28 @@
                   </property>
                   <item>
                    <property name="text">
-                    <string>Static</string>
+                    <string>Ethernet Port 1</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>DHCP</string>
+                    <string>Ethernet Port 2</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>Auto</string>
+                    <string>Ethernet Port 3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Ethernet Port 4</string>
                    </property>
                   </item>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_iptype3">
+                 <spacer name="horizontalSpacer_ethernet_input3">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2039,7 +2570,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="ios_separator_ethernet3">
+              <widget class="QFrame" name="ios_separator_ethernet">
                <property name="styleSheet">
                 <string notr="true">background-color: #e5e5ea; border: none; max-height: 1px;</string>
                </property>
@@ -2052,25 +2583,10 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="ios_row_ethernet_timeout">
-               <layout class="QHBoxLayout" name="ios_row_ethernet_timeoutLayout">
-                <property name="leftMargin">
-                 <number>16</number>
-                </property>
-                <property name="topMargin">
-                 <number>12</number>
-                </property>
-                <property name="rightMargin">
-                 <number>16</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>12</number>
-                </property>
-                <property name="minimumHeight" stdset="0">
-                 <number>44</number>
-                </property>
+              <widget class="QFrame" name="ios_row_ethernet_function">
+               <layout class="QHBoxLayout" name="ios_row_ethernet_functionLayout">
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_timeout">
+                 <spacer name="horizontalSpacer_ethernet_function">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2086,17 +2602,17 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_ethernet_timeout">
+                 <widget class="QLabel" name="label_ethernet_function">
                   <property name="styleSheet">
-                   <string notr="true"/>
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Connection Timeout</string>
+                   <string>Function</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_timeout2">
+                 <spacer name="horizontalSpacer_ethernet_function2">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2109,23 +2625,45 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_ethernet_timeout">
+                 <widget class="QComboBox" name="comboBox_ethernet_function">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
                     <height>0</height>
                    </size>
                   </property>
-                  <property name="text">
-                   <string>3</string>
+                  <property name="frame">
+                   <bool>true</bool>
                   </property>
-                  <property name="placeholderText">
-                   <string>Enter timeout in seconds</string>
-                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Not Used</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Network Monitor</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Data Logger</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Remote Control</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Flexible Ethernet</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_ethernet_timeout3">
+                 <spacer name="horizontalSpacer_ethernet_function3">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -2198,24 +2736,209 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_rs232_1">
-               <property name="text">
-                <string>⚙️ Serial Port Settings</string>
+              <widget class="QFrame" name="ios_row_rs232_input">
+               <layout class="QHBoxLayout" name="ios_row_rs232_inputLayout">
+                <item>
+                 <spacer name="horizontalSpacer_rs232_input">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs232_input">
+                  <property name="styleSheet">
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Input</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs232_input2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs232_input">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>RS-232 Port 1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RS-232 Port 2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RS-232 Port 3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RS-232 Port 4</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs232_input3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="ios_separator_rs232">
+               <property name="styleSheet">
+                <string notr="true">background-color: #e5e5ea; border: none; max-height: 1px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_rs232_2">
-               <property name="text">
-                <string>📊 Data Format</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_rs232_3">
-               <property name="text">
-                <string>🔧 Flow Control</string>
-               </property>
+              <widget class="QFrame" name="ios_row_rs232_function">
+               <layout class="QHBoxLayout" name="ios_row_rs232_functionLayout">
+                <item>
+                 <spacer name="horizontalSpacer_rs232_function">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rs232_function">
+                  <property name="styleSheet">
+                   <string notr="true">font-size: 17px; color: #1d1d1f;</string>
+                  </property>
+                  <property name="text">
+                   <string>Function</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs232_function2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_rs232_function">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Not Used</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Serial Monitor</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Data Logger</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Remote Control</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Flexible RS-232</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_rs232_function3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>100</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
