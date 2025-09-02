@@ -144,18 +144,28 @@ QFrame#card_ethernet, QFrame#card_rs232, QFrame#card_rtu, QFrame#card_tcp {
 }
 
 /* iOS Style Form Elements */
+
 QFrame#ios_row_input, QFrame#ios_row_function, QFrame#ios_row_polarity,
 QFrame#ios_row_action, QFrame#ios_row_arming, QFrame#ios_row_lcd, QFrame#ios_row_delay,
 QFrame#ios_row_analogue_input, QFrame#ios_row_analogue_function,
 QFrame#ios_row_ethernet_ip, QFrame#ios_row_ethernet_port, QFrame#ios_row_ethernet_timeout,
 QFrame#ios_row_ethernet_iptype, QFrame#ios_row_rs485_input, QFrame#ios_row_rs485_function,
 QFrame#ios_row_rs485_polarity, QFrame#ios_row_rs485_action, QFrame#ios_row_rs485_arming,
-QFrame#ios_row_rs485_lcd, QFrame#ios_row_rs485_delay {
+QFrame#ios_row_rs485_lcd, QFrame#ios_row_rs485_delay, QFrame#ios_row_ethernet_input,
+QFrame#ios_row_ethernet_function, QFrame#ios_row_ethernet_polarity, QFrame#ios_row_ethernet_action,
+QFrame#ios_row_ethernet_arming, QFrame#ios_row_ethernet_lcd, QFrame#ios_row_ethernet_activation {
     background-color: white;
     border: none;
     min-height: 44px;
 }
 
+/*
+QFrame {
+    background-color: white;
+    border: none;
+    min-height: 44px;
+}
+*/
 /*
 QFrame#ios_row_input:hover, QFrame#ios_row_function:hover, QFrame#ios_row_polarity:hover,
 QFrame#ios_row_action:hover, QFrame#ios_row_arming:hover, QFrame#ios_row_lcd:hover, QFrame#ios_row_delay:hover,

@@ -1829,19 +1829,19 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1000, 22));
-        menubar->setVisible(false);
+        menubar->setGeometry(QRect(0, 0, 1000, 25));
+        menubar->setVisible(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        statusbar->setVisible(false);
+        statusbar->setVisible(true);
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(4);
         tabWidget_4->setCurrentIndex(1);
-        tabWidget_5->setCurrentIndex(2);
+        tabWidget_5->setCurrentIndex(3);
         tabWidget_modbus->setCurrentIndex(1);
 
 

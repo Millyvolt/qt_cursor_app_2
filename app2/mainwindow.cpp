@@ -26,6 +26,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox_rs_Parity->addItems({"None", "Even", "Odd"});
     ui->comboBox_rs_StopBits->addItems({"1 Stop Bit", "2 Stop Bits"});
 
+    // Ethernet tab combo boxes - same content as RS-485
+    ui->comboBox_ethernet_IP->addItems({"RS-485 1", "RS-485 2", "RS-232"});
+    ui->comboBox_ethernet_Port->addItems({"COM 1", "COM 2", "COM 3"});
+    ui->comboBox_ethernet_Protocol->addItems({"9600", "56000", "115200"});
+    ui->comboBox_ethernet_Mode->addItems({"8 Data Bits", "7 Data Bits"});
+    ui->comboBox_ethernet_Status->addItems({"None", "Even", "Odd"});
+    ui->comboBox_ethernet_Timeout->addItems({"1 Stop Bit", "2 Stop Bits"});
+
 
     setConnections();   // Connect all buttons to their respective slots
 }
