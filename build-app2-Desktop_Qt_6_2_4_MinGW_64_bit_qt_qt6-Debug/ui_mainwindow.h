@@ -314,10 +314,61 @@ public:
     QVBoxLayout *verticalLayout_tcp;
     QFrame *card_tcp;
     QVBoxLayout *card_tcpLayout;
-    QLabel *description_tcp;
-    QPushButton *pushButton_tcp_1;
-    QPushButton *pushButton_tcp_2;
-    QPushButton *pushButton_tcp_3;
+    QFrame *ios_row_tcp_input;
+    QHBoxLayout *ios_row_tcp_input_layout;
+    QSpacerItem *horizontalSpacer_tcp_2;
+    QLabel *label_tcp_input;
+    QSpacerItem *horizontalSpacer_tcp_input;
+    QLineEdit *lineEdit_tcp_SlaveAddress;
+    QSpacerItem *horizontalSpacer_tcp;
+    QFrame *ios_separator_tcp_1;
+    QFrame *ios_row_tcp_function;
+    QHBoxLayout *ios_row_tcp_function_layout;
+    QSpacerItem *horizontalSpacer_tcp_3;
+    QLabel *label_tcp_function;
+    QSpacerItem *horizontalSpacer_tcp_function;
+    QComboBox *cBox_MODBUSCommand;
+    QSpacerItem *horizontalSpacer_tcp_4;
+    QFrame *ios_separator_tcp_2;
+    QFrame *ios_row_tcp_polarity;
+    QHBoxLayout *ios_row_tcp_polarity_layout;
+    QSpacerItem *horizontalSpacer_tcp_5;
+    QLabel *label_tcp_polarity;
+    QSpacerItem *horizontalSpacer_tcp_polarity;
+    QLineEdit *lEdit_MB_Register_Address;
+    QSpacerItem *horizontalSpacer_tcp_6;
+    QFrame *ios_separator_tcp_3;
+    QFrame *ios_row_tcp_action;
+    QHBoxLayout *ios_row_tcp_action_layout;
+    QSpacerItem *horizontalSpacer_tcp_7;
+    QLabel *label_tcp_action;
+    QSpacerItem *horizontalSpacer_tcp_action;
+    QComboBox *comboBox_tcp_Mode;
+    QSpacerItem *horizontalSpacer_tcp_11;
+    QFrame *ios_separator_tcp_4;
+    QFrame *ios_row_tcp_arming;
+    QHBoxLayout *ios_row_tcp_arming_layout;
+    QSpacerItem *horizontalSpacer_tcp_8;
+    QLabel *label_tcp_arming;
+    QSpacerItem *horizontalSpacer_tcp_arming;
+    QComboBox *comboBox_tcp_Status;
+    QSpacerItem *horizontalSpacer_tcp_12;
+    QFrame *ios_separator_tcp_5;
+    QFrame *ios_row_tcp_lcd;
+    QHBoxLayout *ios_row_tcp_lcd_layout;
+    QSpacerItem *horizontalSpacer_tcp_9;
+    QLabel *label_tcp_lcd;
+    QSpacerItem *horizontalSpacer_tcp_lcd;
+    QComboBox *comboBox_tcp_Timeout;
+    QSpacerItem *horizontalSpacer_tcp_13;
+    QFrame *ios_separator_tcp_6;
+    QFrame *ios_row_tcp_activation;
+    QHBoxLayout *ios_row_tcp_activation_layout;
+    QSpacerItem *horizontalSpacer_tcp_10;
+    QLabel *label_tcp_activation;
+    QSpacerItem *horizontalSpacer_tcp_activation;
+    QLineEdit *lineEdit_tcp_Timeout;
+    QSpacerItem *horizontalSpacer_tcp_14;
     QSpacerItem *verticalSpacer_tcp;
     QWidget *tab_rtu;
     QVBoxLayout *verticalLayout_rtu;
@@ -1731,38 +1782,287 @@ public:
         verticalLayout_tcp->setContentsMargins(20, 20, 20, 20);
         card_tcp = new QFrame(tab_tcp);
         card_tcp->setObjectName(QString::fromUtf8("card_tcp"));
-        card_tcp->setStyleSheet(QString::fromUtf8(""));
-        card_tcp->setFrameShape(QFrame::StyledPanel);
-        card_tcp->setFrameShadow(QFrame::Raised);
         card_tcpLayout = new QVBoxLayout(card_tcp);
-        card_tcpLayout->setSpacing(12);
+        card_tcpLayout->setSpacing(0);
         card_tcpLayout->setObjectName(QString::fromUtf8("card_tcpLayout"));
-        card_tcpLayout->setContentsMargins(16, 16, 16, 16);
-        description_tcp = new QLabel(card_tcp);
-        description_tcp->setObjectName(QString::fromUtf8("description_tcp"));
-        description_tcp->setStyleSheet(QString::fromUtf8("font-size: 16px; color: #1d1d1f; font-weight: 500;"));
-        description_tcp->setAlignment(Qt::AlignCenter);
-        description_tcp->setWordWrap(true);
+        card_tcpLayout->setContentsMargins(0, 0, 0, 0);
+        ios_row_tcp_input = new QFrame(card_tcp);
+        ios_row_tcp_input->setObjectName(QString::fromUtf8("ios_row_tcp_input"));
+        ios_row_tcp_input_layout = new QHBoxLayout(ios_row_tcp_input);
+        ios_row_tcp_input_layout->setObjectName(QString::fromUtf8("ios_row_tcp_input_layout"));
+        ios_row_tcp_input_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_2 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        card_tcpLayout->addWidget(description_tcp);
+        ios_row_tcp_input_layout->addItem(horizontalSpacer_tcp_2);
 
-        pushButton_tcp_1 = new QPushButton(card_tcp);
-        pushButton_tcp_1->setObjectName(QString::fromUtf8("pushButton_tcp_1"));
-        pushButton_tcp_1->setStyleSheet(QString::fromUtf8(""));
+        label_tcp_input = new QLabel(ios_row_tcp_input);
+        label_tcp_input->setObjectName(QString::fromUtf8("label_tcp_input"));
 
-        card_tcpLayout->addWidget(pushButton_tcp_1);
+        ios_row_tcp_input_layout->addWidget(label_tcp_input);
 
-        pushButton_tcp_2 = new QPushButton(card_tcp);
-        pushButton_tcp_2->setObjectName(QString::fromUtf8("pushButton_tcp_2"));
-        pushButton_tcp_2->setStyleSheet(QString::fromUtf8(""));
+        horizontalSpacer_tcp_input = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        card_tcpLayout->addWidget(pushButton_tcp_2);
+        ios_row_tcp_input_layout->addItem(horizontalSpacer_tcp_input);
 
-        pushButton_tcp_3 = new QPushButton(card_tcp);
-        pushButton_tcp_3->setObjectName(QString::fromUtf8("pushButton_tcp_3"));
-        pushButton_tcp_3->setStyleSheet(QString::fromUtf8(""));
+        lineEdit_tcp_SlaveAddress = new QLineEdit(ios_row_tcp_input);
+        lineEdit_tcp_SlaveAddress->setObjectName(QString::fromUtf8("lineEdit_tcp_SlaveAddress"));
+        sizePolicy.setHeightForWidth(lineEdit_tcp_SlaveAddress->sizePolicy().hasHeightForWidth());
+        lineEdit_tcp_SlaveAddress->setSizePolicy(sizePolicy);
+        lineEdit_tcp_SlaveAddress->setMinimumSize(QSize(150, 0));
+        lineEdit_tcp_SlaveAddress->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        card_tcpLayout->addWidget(pushButton_tcp_3);
+        ios_row_tcp_input_layout->addWidget(lineEdit_tcp_SlaveAddress);
+
+        horizontalSpacer_tcp = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_input_layout->addItem(horizontalSpacer_tcp);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_input);
+
+        ios_separator_tcp_1 = new QFrame(card_tcp);
+        ios_separator_tcp_1->setObjectName(QString::fromUtf8("ios_separator_tcp_1"));
+        ios_separator_tcp_1->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_1->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_1);
+
+        ios_row_tcp_function = new QFrame(card_tcp);
+        ios_row_tcp_function->setObjectName(QString::fromUtf8("ios_row_tcp_function"));
+        ios_row_tcp_function_layout = new QHBoxLayout(ios_row_tcp_function);
+        ios_row_tcp_function_layout->setObjectName(QString::fromUtf8("ios_row_tcp_function_layout"));
+        ios_row_tcp_function_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_function_layout->addItem(horizontalSpacer_tcp_3);
+
+        label_tcp_function = new QLabel(ios_row_tcp_function);
+        label_tcp_function->setObjectName(QString::fromUtf8("label_tcp_function"));
+
+        ios_row_tcp_function_layout->addWidget(label_tcp_function);
+
+        horizontalSpacer_tcp_function = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_function_layout->addItem(horizontalSpacer_tcp_function);
+
+        cBox_MODBUSCommand = new QComboBox(ios_row_tcp_function);
+        cBox_MODBUSCommand->setObjectName(QString::fromUtf8("cBox_MODBUSCommand"));
+        sizePolicy.setHeightForWidth(cBox_MODBUSCommand->sizePolicy().hasHeightForWidth());
+        cBox_MODBUSCommand->setSizePolicy(sizePolicy);
+        cBox_MODBUSCommand->setMinimumSize(QSize(150, 0));
+
+        ios_row_tcp_function_layout->addWidget(cBox_MODBUSCommand);
+
+        horizontalSpacer_tcp_4 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_function_layout->addItem(horizontalSpacer_tcp_4);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_function);
+
+        ios_separator_tcp_2 = new QFrame(card_tcp);
+        ios_separator_tcp_2->setObjectName(QString::fromUtf8("ios_separator_tcp_2"));
+        ios_separator_tcp_2->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_2->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_2);
+
+        ios_row_tcp_polarity = new QFrame(card_tcp);
+        ios_row_tcp_polarity->setObjectName(QString::fromUtf8("ios_row_tcp_polarity"));
+        ios_row_tcp_polarity_layout = new QHBoxLayout(ios_row_tcp_polarity);
+        ios_row_tcp_polarity_layout->setObjectName(QString::fromUtf8("ios_row_tcp_polarity_layout"));
+        ios_row_tcp_polarity_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_5 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_polarity_layout->addItem(horizontalSpacer_tcp_5);
+
+        label_tcp_polarity = new QLabel(ios_row_tcp_polarity);
+        label_tcp_polarity->setObjectName(QString::fromUtf8("label_tcp_polarity"));
+
+        ios_row_tcp_polarity_layout->addWidget(label_tcp_polarity);
+
+        horizontalSpacer_tcp_polarity = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_polarity_layout->addItem(horizontalSpacer_tcp_polarity);
+
+        lEdit_MB_Register_Address = new QLineEdit(ios_row_tcp_polarity);
+        lEdit_MB_Register_Address->setObjectName(QString::fromUtf8("lEdit_MB_Register_Address"));
+        sizePolicy.setHeightForWidth(lEdit_MB_Register_Address->sizePolicy().hasHeightForWidth());
+        lEdit_MB_Register_Address->setSizePolicy(sizePolicy);
+        lEdit_MB_Register_Address->setMinimumSize(QSize(150, 0));
+
+        ios_row_tcp_polarity_layout->addWidget(lEdit_MB_Register_Address);
+
+        horizontalSpacer_tcp_6 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_polarity_layout->addItem(horizontalSpacer_tcp_6);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_polarity);
+
+        ios_separator_tcp_3 = new QFrame(card_tcp);
+        ios_separator_tcp_3->setObjectName(QString::fromUtf8("ios_separator_tcp_3"));
+        ios_separator_tcp_3->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_3->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_3);
+
+        ios_row_tcp_action = new QFrame(card_tcp);
+        ios_row_tcp_action->setObjectName(QString::fromUtf8("ios_row_tcp_action"));
+        ios_row_tcp_action_layout = new QHBoxLayout(ios_row_tcp_action);
+        ios_row_tcp_action_layout->setObjectName(QString::fromUtf8("ios_row_tcp_action_layout"));
+        ios_row_tcp_action_layout->setContentsMargins(16, -1, -1, -1);
+        horizontalSpacer_tcp_7 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_action_layout->addItem(horizontalSpacer_tcp_7);
+
+        label_tcp_action = new QLabel(ios_row_tcp_action);
+        label_tcp_action->setObjectName(QString::fromUtf8("label_tcp_action"));
+
+        ios_row_tcp_action_layout->addWidget(label_tcp_action);
+
+        horizontalSpacer_tcp_action = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_action_layout->addItem(horizontalSpacer_tcp_action);
+
+        comboBox_tcp_Mode = new QComboBox(ios_row_tcp_action);
+        comboBox_tcp_Mode->setObjectName(QString::fromUtf8("comboBox_tcp_Mode"));
+        sizePolicy.setHeightForWidth(comboBox_tcp_Mode->sizePolicy().hasHeightForWidth());
+        comboBox_tcp_Mode->setSizePolicy(sizePolicy);
+        comboBox_tcp_Mode->setMinimumSize(QSize(150, 0));
+        comboBox_tcp_Mode->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_tcp_action_layout->addWidget(comboBox_tcp_Mode);
+
+        horizontalSpacer_tcp_11 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_action_layout->addItem(horizontalSpacer_tcp_11);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_action);
+
+        ios_separator_tcp_4 = new QFrame(card_tcp);
+        ios_separator_tcp_4->setObjectName(QString::fromUtf8("ios_separator_tcp_4"));
+        ios_separator_tcp_4->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_4->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_4);
+
+        ios_row_tcp_arming = new QFrame(card_tcp);
+        ios_row_tcp_arming->setObjectName(QString::fromUtf8("ios_row_tcp_arming"));
+        ios_row_tcp_arming_layout = new QHBoxLayout(ios_row_tcp_arming);
+        ios_row_tcp_arming_layout->setObjectName(QString::fromUtf8("ios_row_tcp_arming_layout"));
+        ios_row_tcp_arming_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_8 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_arming_layout->addItem(horizontalSpacer_tcp_8);
+
+        label_tcp_arming = new QLabel(ios_row_tcp_arming);
+        label_tcp_arming->setObjectName(QString::fromUtf8("label_tcp_arming"));
+
+        ios_row_tcp_arming_layout->addWidget(label_tcp_arming);
+
+        horizontalSpacer_tcp_arming = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_arming_layout->addItem(horizontalSpacer_tcp_arming);
+
+        comboBox_tcp_Status = new QComboBox(ios_row_tcp_arming);
+        comboBox_tcp_Status->setObjectName(QString::fromUtf8("comboBox_tcp_Status"));
+        sizePolicy.setHeightForWidth(comboBox_tcp_Status->sizePolicy().hasHeightForWidth());
+        comboBox_tcp_Status->setSizePolicy(sizePolicy);
+        comboBox_tcp_Status->setMinimumSize(QSize(150, 0));
+        comboBox_tcp_Status->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_tcp_arming_layout->addWidget(comboBox_tcp_Status);
+
+        horizontalSpacer_tcp_12 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_arming_layout->addItem(horizontalSpacer_tcp_12);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_arming);
+
+        ios_separator_tcp_5 = new QFrame(card_tcp);
+        ios_separator_tcp_5->setObjectName(QString::fromUtf8("ios_separator_tcp_5"));
+        ios_separator_tcp_5->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_5->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_5);
+
+        ios_row_tcp_lcd = new QFrame(card_tcp);
+        ios_row_tcp_lcd->setObjectName(QString::fromUtf8("ios_row_tcp_lcd"));
+        ios_row_tcp_lcd_layout = new QHBoxLayout(ios_row_tcp_lcd);
+        ios_row_tcp_lcd_layout->setObjectName(QString::fromUtf8("ios_row_tcp_lcd_layout"));
+        ios_row_tcp_lcd_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_9 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_lcd_layout->addItem(horizontalSpacer_tcp_9);
+
+        label_tcp_lcd = new QLabel(ios_row_tcp_lcd);
+        label_tcp_lcd->setObjectName(QString::fromUtf8("label_tcp_lcd"));
+
+        ios_row_tcp_lcd_layout->addWidget(label_tcp_lcd);
+
+        horizontalSpacer_tcp_lcd = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_lcd_layout->addItem(horizontalSpacer_tcp_lcd);
+
+        comboBox_tcp_Timeout = new QComboBox(ios_row_tcp_lcd);
+        comboBox_tcp_Timeout->setObjectName(QString::fromUtf8("comboBox_tcp_Timeout"));
+        sizePolicy.setHeightForWidth(comboBox_tcp_Timeout->sizePolicy().hasHeightForWidth());
+        comboBox_tcp_Timeout->setSizePolicy(sizePolicy);
+        comboBox_tcp_Timeout->setMinimumSize(QSize(150, 0));
+        comboBox_tcp_Timeout->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_tcp_lcd_layout->addWidget(comboBox_tcp_Timeout);
+
+        horizontalSpacer_tcp_13 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_lcd_layout->addItem(horizontalSpacer_tcp_13);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_lcd);
+
+        ios_separator_tcp_6 = new QFrame(card_tcp);
+        ios_separator_tcp_6->setObjectName(QString::fromUtf8("ios_separator_tcp_6"));
+        ios_separator_tcp_6->setFrameShape(QFrame::HLine);
+        ios_separator_tcp_6->setFrameShadow(QFrame::Sunken);
+
+        card_tcpLayout->addWidget(ios_separator_tcp_6);
+
+        ios_row_tcp_activation = new QFrame(card_tcp);
+        ios_row_tcp_activation->setObjectName(QString::fromUtf8("ios_row_tcp_activation"));
+        ios_row_tcp_activation_layout = new QHBoxLayout(ios_row_tcp_activation);
+        ios_row_tcp_activation_layout->setObjectName(QString::fromUtf8("ios_row_tcp_activation_layout"));
+        ios_row_tcp_activation_layout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_tcp_10 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_activation_layout->addItem(horizontalSpacer_tcp_10);
+
+        label_tcp_activation = new QLabel(ios_row_tcp_activation);
+        label_tcp_activation->setObjectName(QString::fromUtf8("label_tcp_activation"));
+
+        ios_row_tcp_activation_layout->addWidget(label_tcp_activation);
+
+        horizontalSpacer_tcp_activation = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_tcp_activation_layout->addItem(horizontalSpacer_tcp_activation);
+
+        lineEdit_tcp_Timeout = new QLineEdit(ios_row_tcp_activation);
+        lineEdit_tcp_Timeout->setObjectName(QString::fromUtf8("lineEdit_tcp_Timeout"));
+        sizePolicy.setHeightForWidth(lineEdit_tcp_Timeout->sizePolicy().hasHeightForWidth());
+        lineEdit_tcp_Timeout->setSizePolicy(sizePolicy);
+        lineEdit_tcp_Timeout->setMinimumSize(QSize(150, 0));
+        lineEdit_tcp_Timeout->setAlignment(Qt::AlignCenter);
+
+        ios_row_tcp_activation_layout->addWidget(lineEdit_tcp_Timeout);
+
+        horizontalSpacer_tcp_14 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_tcp_activation_layout->addItem(horizontalSpacer_tcp_14);
+
+
+        card_tcpLayout->addWidget(ios_row_tcp_activation);
 
 
         verticalLayout_tcp->addWidget(card_tcp);
@@ -1838,10 +2138,10 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(6);
         tabWidget_4->setCurrentIndex(1);
         tabWidget_5->setCurrentIndex(3);
-        tabWidget_modbus->setCurrentIndex(1);
+        tabWidget_modbus->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2023,10 +2323,31 @@ public:
         pushButton7_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\215 Diagnostics", nullptr));
         pushButton7_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\213 Reports", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab7), QCoreApplication::translate("MainWindow", "Outputs", nullptr));
-        description_tcp->setText(QCoreApplication::translate("MainWindow", "MODBUS TCP communication configuration", nullptr));
-        pushButton_tcp_1->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 IP Address", nullptr));
-        pushButton_tcp_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Port Number", nullptr));
-        pushButton_tcp_3->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Connection Settings", nullptr));
+        label_tcp_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_tcp_input->setText(QCoreApplication::translate("MainWindow", "Slave Address", nullptr));
+        lineEdit_tcp_SlaveAddress->setText(QString());
+        ios_separator_tcp_1->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_tcp_function->setText(QCoreApplication::translate("MainWindow", "MODBUS Command", nullptr));
+        ios_separator_tcp_2->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_tcp_polarity->setText(QCoreApplication::translate("MainWindow", "Register Address, Hex", nullptr));
+        ios_separator_tcp_3->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1f;", nullptr));
+        label_tcp_action->setText(QCoreApplication::translate("MainWindow", "empty2", nullptr));
+        comboBox_tcp_Mode->setCurrentText(QString());
+        ios_separator_tcp_4->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_tcp_arming->setText(QCoreApplication::translate("MainWindow", "empty3", nullptr));
+        comboBox_tcp_Status->setCurrentText(QString());
+        ios_separator_tcp_5->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
+        label_tcp_lcd->setText(QCoreApplication::translate("MainWindow", "empty4", nullptr));
+        comboBox_tcp_Timeout->setCurrentText(QString());
+        ios_separator_tcp_6->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
+        label_tcp_activation->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1f;", nullptr));
+        label_tcp_activation->setText(QCoreApplication::translate("MainWindow", "Timeout, s", nullptr));
+        lineEdit_tcp_Timeout->setText(QString());
         tabWidget_modbus->setTabText(tabWidget_modbus->indexOf(tab_tcp), QCoreApplication::translate("MainWindow", "TCP", nullptr));
 #if QT_CONFIG(whatsthis)
         card_rtu->setWhatsThis(QCoreApplication::translate("MainWindow", "q", nullptr));
