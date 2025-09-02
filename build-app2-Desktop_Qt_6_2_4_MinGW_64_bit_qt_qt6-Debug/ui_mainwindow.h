@@ -15,6 +15,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -205,7 +206,7 @@ public:
     QSpacerItem *horizontalSpacer_rs485_10;
     QLabel *label_rs485_delay;
     QSpacerItem *horizontalSpacer_rs485_delay;
-    QComboBox *comboBox_rs485_delay;
+    QLineEdit *lineEdit;
     QSpacerItem *horizontalSpacer_rs485_14;
     QSpacerItem *verticalSpacer_rs485;
     QWidget *tab_can;
@@ -1166,20 +1167,14 @@ public:
 
         ios_row_rs485_delay_layout->addItem(horizontalSpacer_rs485_delay);
 
-        comboBox_rs485_delay = new QComboBox(ios_row_rs485_delay);
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->addItem(QString());
-        comboBox_rs485_delay->setObjectName(QString::fromUtf8("comboBox_rs485_delay"));
-        sizePolicy.setHeightForWidth(comboBox_rs485_delay->sizePolicy().hasHeightForWidth());
-        comboBox_rs485_delay->setSizePolicy(sizePolicy);
-        comboBox_rs485_delay->setMinimumSize(QSize(150, 0));
-        comboBox_rs485_delay->setStyleSheet(QString::fromUtf8(""));
+        lineEdit = new QLineEdit(ios_row_rs485_delay);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
+        lineEdit->setSizePolicy(sizePolicy);
+        lineEdit->setMinimumSize(QSize(150, 0));
+        lineEdit->setAlignment(Qt::AlignCenter);
 
-        ios_row_rs485_delay_layout->addWidget(comboBox_rs485_delay);
+        ios_row_rs485_delay_layout->addWidget(lineEdit);
 
         horizontalSpacer_rs485_14 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -1746,14 +1741,7 @@ public:
         ios_separator_rs485_6->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_rs485_delay->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
         label_rs485_delay->setText(QCoreApplication::translate("MainWindow", "Timeout", nullptr));
-        comboBox_rs485_delay->setItemText(0, QCoreApplication::translate("MainWindow", "0s", nullptr));
-        comboBox_rs485_delay->setItemText(1, QCoreApplication::translate("MainWindow", "1s", nullptr));
-        comboBox_rs485_delay->setItemText(2, QCoreApplication::translate("MainWindow", "2s", nullptr));
-        comboBox_rs485_delay->setItemText(3, QCoreApplication::translate("MainWindow", "5s", nullptr));
-        comboBox_rs485_delay->setItemText(4, QCoreApplication::translate("MainWindow", "10s", nullptr));
-        comboBox_rs485_delay->setItemText(5, QCoreApplication::translate("MainWindow", "30s", nullptr));
-
-        comboBox_rs485_delay->setCurrentText(QCoreApplication::translate("MainWindow", "0s", nullptr));
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs485), QCoreApplication::translate("MainWindow", "RS-485", nullptr));
         description_can->setText(QCoreApplication::translate("MainWindow", "CAN bus communication configuration", nullptr));
         pushButton_can_1->setText(QCoreApplication::translate("MainWindow", "\360\237\232\227 CAN ID Configuration", nullptr));

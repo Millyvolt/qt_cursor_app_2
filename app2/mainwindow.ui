@@ -2231,7 +2231,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Timeout</string>
+                   <string>Timeout, s</string>
                   </property>
                  </widget>
                 </item>
@@ -2249,7 +2249,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox_rs485_delay">
+                 <widget class="QLineEdit" name="lineEdit">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2262,42 +2262,12 @@
                     <height>0</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
+                  <property name="text">
+                   <string>1</string>
                   </property>
-                  <property name="currentText">
-                   <string>0s</string>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
                   </property>
-                  <item>
-                   <property name="text">
-                    <string>0s</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1s</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>2s</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>5s</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>10s</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>30s</string>
-                   </property>
-                  </item>
                  </widget>
                 </item>
                 <item>

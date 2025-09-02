@@ -148,7 +148,9 @@ QFrame#ios_row_input, QFrame#ios_row_function, QFrame#ios_row_polarity,
 QFrame#ios_row_action, QFrame#ios_row_arming, QFrame#ios_row_lcd, QFrame#ios_row_delay,
 QFrame#ios_row_analogue_input, QFrame#ios_row_analogue_function,
 QFrame#ios_row_ethernet_ip, QFrame#ios_row_ethernet_port, QFrame#ios_row_ethernet_timeout,
-QFrame#ios_row_ethernet_iptype, QFrame#ios_row_rs485_input {
+QFrame#ios_row_ethernet_iptype, QFrame#ios_row_rs485_input, QFrame#ios_row_rs485_function,
+QFrame#ios_row_rs485_polarity, QFrame#ios_row_rs485_action, QFrame#ios_row_rs485_arming,
+QFrame#ios_row_rs485_lcd, QFrame#ios_row_rs485_delay {
     background-color: white;
     border: none;
     min-height: 44px;
@@ -217,6 +219,43 @@ QComboBox QAbstractItemView::item {
 QComboBox QAbstractItemView::item:selected {
     background-color: #f2f2f7;
     color: #007aff;
+}
+
+/* iOS Style QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+    color: #007aff;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 8px 10px;
+    margin: 4px;
+    min-height: 10px;
+    selection-background-color: #007aff;
+    selection-color: white;
+}
+
+QLineEdit:focus {
+    border: 2px solid #007aff;
+    background-color: white;
+    outline: none;
+}
+
+QLineEdit:hover {
+    border: 1px solid #d1d1d6;
+    background-color: #fafafa;
+}
+
+QLineEdit:disabled {
+    background-color: #f2f2f7;
+    color: #8e8e93;
+    border: 1px solid #e5e5ea;
+}
+
+QLineEdit::placeholder {
+    color: #86868b;
+    font-style: italic;
 }
 
 QTabWidget::pane {
