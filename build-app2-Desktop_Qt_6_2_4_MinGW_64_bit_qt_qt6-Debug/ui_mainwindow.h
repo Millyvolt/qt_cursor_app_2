@@ -248,7 +248,7 @@ public:
     QSpacerItem *horizontalSpacer_ethernet_2;
     QLabel *label_ethernet_input;
     QSpacerItem *horizontalSpacer_ethernet_input;
-    QComboBox *comboBox_ethernet_IP;
+    QLineEdit *lineEdit_eth_IP;
     QSpacerItem *horizontalSpacer_ethernet;
     QFrame *ios_separator_ethernet_1;
     QFrame *ios_row_ethernet_function;
@@ -256,7 +256,7 @@ public:
     QSpacerItem *horizontalSpacer_ethernet_3;
     QLabel *label_ethernet_function;
     QSpacerItem *horizontalSpacer_ethernet_function;
-    QComboBox *comboBox_ethernet_Port;
+    QLineEdit *lineEdit_eth_Port;
     QSpacerItem *horizontalSpacer_ethernet_4;
     QFrame *ios_separator_ethernet_2;
     QFrame *ios_row_ethernet_polarity;
@@ -296,7 +296,7 @@ public:
     QSpacerItem *horizontalSpacer_ethernet_10;
     QLabel *label_ethernet_activation;
     QSpacerItem *horizontalSpacer_ethernet_activation;
-    QLineEdit *lineEdit_ethernet_timeout;
+    QLineEdit *lineEdit_eth_Timeout;
     QSpacerItem *horizontalSpacer_ethernet_14;
     QSpacerItem *verticalSpacer_ethernet;
     QWidget *tab7;
@@ -1406,15 +1406,14 @@ public:
 
         ios_row_ethernet_input_layout->addItem(horizontalSpacer_ethernet_input);
 
-        comboBox_ethernet_IP = new QComboBox(ios_row_ethernet_input);
-        comboBox_ethernet_IP->setObjectName(QString::fromUtf8("comboBox_ethernet_IP"));
-        sizePolicy.setHeightForWidth(comboBox_ethernet_IP->sizePolicy().hasHeightForWidth());
-        comboBox_ethernet_IP->setSizePolicy(sizePolicy);
-        comboBox_ethernet_IP->setMinimumSize(QSize(150, 0));
-        comboBox_ethernet_IP->setStyleSheet(QString::fromUtf8(""));
-        comboBox_ethernet_IP->setFrame(true);
+        lineEdit_eth_IP = new QLineEdit(ios_row_ethernet_input);
+        lineEdit_eth_IP->setObjectName(QString::fromUtf8("lineEdit_eth_IP"));
+        sizePolicy.setHeightForWidth(lineEdit_eth_IP->sizePolicy().hasHeightForWidth());
+        lineEdit_eth_IP->setSizePolicy(sizePolicy);
+        lineEdit_eth_IP->setMinimumSize(QSize(150, 0));
+        lineEdit_eth_IP->setAlignment(Qt::AlignCenter);
 
-        ios_row_ethernet_input_layout->addWidget(comboBox_ethernet_IP);
+        ios_row_ethernet_input_layout->addWidget(lineEdit_eth_IP);
 
         horizontalSpacer_ethernet = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -1448,14 +1447,14 @@ public:
 
         ios_row_ethernet_function_layout->addItem(horizontalSpacer_ethernet_function);
 
-        comboBox_ethernet_Port = new QComboBox(ios_row_ethernet_function);
-        comboBox_ethernet_Port->setObjectName(QString::fromUtf8("comboBox_ethernet_Port"));
-        sizePolicy.setHeightForWidth(comboBox_ethernet_Port->sizePolicy().hasHeightForWidth());
-        comboBox_ethernet_Port->setSizePolicy(sizePolicy);
-        comboBox_ethernet_Port->setMinimumSize(QSize(150, 0));
-        comboBox_ethernet_Port->setStyleSheet(QString::fromUtf8(""));
+        lineEdit_eth_Port = new QLineEdit(ios_row_ethernet_function);
+        lineEdit_eth_Port->setObjectName(QString::fromUtf8("lineEdit_eth_Port"));
+        sizePolicy.setHeightForWidth(lineEdit_eth_Port->sizePolicy().hasHeightForWidth());
+        lineEdit_eth_Port->setSizePolicy(sizePolicy);
+        lineEdit_eth_Port->setMinimumSize(QSize(150, 0));
+        lineEdit_eth_Port->setAlignment(Qt::AlignCenter);
 
-        ios_row_ethernet_function_layout->addWidget(comboBox_ethernet_Port);
+        ios_row_ethernet_function_layout->addWidget(lineEdit_eth_Port);
 
         horizontalSpacer_ethernet_4 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -1653,14 +1652,14 @@ public:
 
         ios_row_ethernet_activation_layout->addItem(horizontalSpacer_ethernet_activation);
 
-        lineEdit_ethernet_timeout = new QLineEdit(ios_row_ethernet_activation);
-        lineEdit_ethernet_timeout->setObjectName(QString::fromUtf8("lineEdit_ethernet_timeout"));
-        sizePolicy.setHeightForWidth(lineEdit_ethernet_timeout->sizePolicy().hasHeightForWidth());
-        lineEdit_ethernet_timeout->setSizePolicy(sizePolicy);
-        lineEdit_ethernet_timeout->setMinimumSize(QSize(150, 0));
-        lineEdit_ethernet_timeout->setAlignment(Qt::AlignCenter);
+        lineEdit_eth_Timeout = new QLineEdit(ios_row_ethernet_activation);
+        lineEdit_eth_Timeout->setObjectName(QString::fromUtf8("lineEdit_eth_Timeout"));
+        sizePolicy.setHeightForWidth(lineEdit_eth_Timeout->sizePolicy().hasHeightForWidth());
+        lineEdit_eth_Timeout->setSizePolicy(sizePolicy);
+        lineEdit_eth_Timeout->setMinimumSize(QSize(150, 0));
+        lineEdit_eth_Timeout->setAlignment(Qt::AlignCenter);
 
-        ios_row_ethernet_activation_layout->addWidget(lineEdit_ethernet_timeout);
+        ios_row_ethernet_activation_layout->addWidget(lineEdit_eth_Timeout);
 
         horizontalSpacer_ethernet_14 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -1992,32 +1991,31 @@ public:
 
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs232), QCoreApplication::translate("MainWindow", "RS-232", nullptr));
         label_ethernet_input->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
-        label_ethernet_input->setText(QCoreApplication::translate("MainWindow", "RS", nullptr));
-        comboBox_ethernet_IP->setCurrentText(QString());
+        label_ethernet_input->setText(QCoreApplication::translate("MainWindow", "IP Address", nullptr));
+        lineEdit_eth_IP->setText(QString());
         ios_separator_ethernet_1->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_function->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
         label_ethernet_function->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
-        comboBox_ethernet_Port->setCurrentText(QString());
         ios_separator_ethernet_2->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_polarity->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
-        label_ethernet_polarity->setText(QCoreApplication::translate("MainWindow", "Baud Rate", nullptr));
+        label_ethernet_polarity->setText(QCoreApplication::translate("MainWindow", "empty1", nullptr));
         comboBox_ethernet_Protocol->setCurrentText(QString());
         ios_separator_ethernet_3->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_action->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
-        label_ethernet_action->setText(QCoreApplication::translate("MainWindow", "Data Bits", nullptr));
+        label_ethernet_action->setText(QCoreApplication::translate("MainWindow", "empty2", nullptr));
         comboBox_ethernet_Mode->setCurrentText(QString());
         ios_separator_ethernet_4->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_arming->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
-        label_ethernet_arming->setText(QCoreApplication::translate("MainWindow", "Parity", nullptr));
+        label_ethernet_arming->setText(QCoreApplication::translate("MainWindow", "empty3", nullptr));
         comboBox_ethernet_Status->setCurrentText(QString());
         ios_separator_ethernet_5->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_lcd->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1d1f;", nullptr));
-        label_ethernet_lcd->setText(QCoreApplication::translate("MainWindow", "Stop Bits", nullptr));
+        label_ethernet_lcd->setText(QCoreApplication::translate("MainWindow", "empty4", nullptr));
         comboBox_ethernet_Timeout->setCurrentText(QString());
         ios_separator_ethernet_6->setStyleSheet(QCoreApplication::translate("MainWindow", "background-color: #e5e5ea; border: none; max-height: 1px;", nullptr));
         label_ethernet_activation->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 17px; color: #1d1f;", nullptr));
         label_ethernet_activation->setText(QCoreApplication::translate("MainWindow", "Timeout, s", nullptr));
-        lineEdit_ethernet_timeout->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
+        lineEdit_eth_Timeout->setText(QString());
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_ethernet), QCoreApplication::translate("MainWindow", "Ethernet", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab8), QCoreApplication::translate("MainWindow", "Communications", nullptr));
         description7->setText(QCoreApplication::translate("MainWindow", "System monitoring and diagnostics", nullptr));

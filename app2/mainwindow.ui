@@ -2717,7 +2717,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>RS</string>
+                   <string>IP Address</string>
                   </property>
                  </widget>
                 </item>
@@ -2735,7 +2735,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox_ethernet_IP">
+                 <widget class="QLineEdit" name="lineEdit_eth_IP">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2748,14 +2748,11 @@
                     <height>0</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="currentText">
+                  <property name="text">
                    <string/>
                   </property>
-                  <property name="frame">
-                   <bool>true</bool>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -2846,7 +2843,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox_ethernet_Port">
+                 <widget class="QLineEdit" name="lineEdit_eth_Port">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2859,11 +2856,8 @@
                     <height>0</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="currentText">
-                   <string/>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -2936,7 +2930,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Baud Rate</string>
+                   <string>empty1</string>
                   </property>
                  </widget>
                 </item>
@@ -3035,7 +3029,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Data Bits</string>
+                   <string>empty2</string>
                   </property>
                  </widget>
                 </item>
@@ -3143,7 +3137,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Parity</string>
+                   <string>empty3</string>
                   </property>
                  </widget>
                 </item>
@@ -3251,7 +3245,7 @@
                    <string>font-size: 17px; color: #1d1d1f;</string>
                   </property>
                   <property name="text">
-                   <string>Stop Bits</string>
+                   <string>empty4</string>
                   </property>
                  </widget>
                 </item>
@@ -3377,7 +3371,7 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_ethernet_timeout">
+                 <widget class="QLineEdit" name="lineEdit_eth_Timeout">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3391,7 +3385,7 @@
                    </size>
                   </property>
                   <property name="text">
-                   <string>1</string>
+                   <string/>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
