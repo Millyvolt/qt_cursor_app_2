@@ -55,9 +55,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_can_2, &QPushButton::clicked, this, &MainWindow::onButtonCan_2Clicked);
     connect(ui->pushButton_can_3, &QPushButton::clicked, this, &MainWindow::onButtonCan_3Clicked);
     
-    connect(ui->pushButton_ethernet_1, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_1Clicked);
-    connect(ui->pushButton_ethernet_2, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_2Clicked);
-    connect(ui->pushButton_ethernet_3, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_3Clicked);
+//    connect(ui->pushButton_ethernet_1, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_1Clicked);
+//    connect(ui->pushButton_ethernet_2, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_2Clicked);
+//    connect(ui->pushButton_ethernet_3, &QPushButton::clicked, this, &MainWindow::onButtonEthernet_3Clicked);
     
     connect(ui->pushButton_rs232_1, &QPushButton::clicked, this, &MainWindow::onButtonRs232_1Clicked);
     connect(ui->pushButton_rs232_2, &QPushButton::clicked, this, &MainWindow::onButtonRs232_2Clicked);

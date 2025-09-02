@@ -146,7 +146,9 @@ QFrame#card_ethernet, QFrame#card_rs232, QFrame#card_rtu, QFrame#card_tcp {
 /* iOS Style Form Elements */
 QFrame#ios_row_input, QFrame#ios_row_function, QFrame#ios_row_polarity,
 QFrame#ios_row_action, QFrame#ios_row_arming, QFrame#ios_row_lcd, QFrame#ios_row_delay,
-QFrame#ios_row_analogue_input, QFrame#ios_row_analogue_function {
+QFrame#ios_row_analogue_input, QFrame#ios_row_analogue_function,
+QFrame#ios_row_ethernet_ip, QFrame#ios_row_ethernet_port, QFrame#ios_row_ethernet_timeout,
+QFrame#ios_row_ethernet_iptype {
     background-color: white;
     border: none;
     min-height: 44px;

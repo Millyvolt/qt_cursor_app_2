@@ -15,6 +15,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -146,15 +147,6 @@ public:
     QComboBox *comboBox_delay;
     QSpacerItem *horizontalSpacer_14;
     QSpacerItem *verticalSpacer_digital;
-    QWidget *tab7;
-    QVBoxLayout *verticalLayout_6;
-    QFrame *card7;
-    QVBoxLayout *card7Layout;
-    QLabel *description7;
-    QPushButton *pushButton7_1;
-    QPushButton *pushButton7_2;
-    QPushButton *pushButton7_3;
-    QSpacerItem *verticalSpacer_5;
     QWidget *tab8;
     QTabWidget *tabWidget_5;
     QWidget *tab_rs485;
@@ -180,9 +172,37 @@ public:
     QFrame *card_ethernet;
     QVBoxLayout *card_ethernetLayout;
     QLabel *description_ethernet;
-    QPushButton *pushButton_ethernet_1;
-    QPushButton *pushButton_ethernet_2;
-    QPushButton *pushButton_ethernet_3;
+    QFrame *ios_row_ethernet_ip;
+    QHBoxLayout *ios_row_ethernet_ipLayout;
+    QSpacerItem *horizontalSpacer_ethernet_ip;
+    QLabel *label_ethernet_ip;
+    QSpacerItem *horizontalSpacer_ethernet_ip2;
+    QLineEdit *lineEdit_ethernet_ip;
+    QSpacerItem *horizontalSpacer_ethernet_ip3;
+    QFrame *ios_separator_ethernet1;
+    QFrame *ios_row_ethernet_port;
+    QHBoxLayout *ios_row_ethernet_portLayout;
+    QSpacerItem *horizontalSpacer_ethernet_port;
+    QLabel *label_ethernet_port;
+    QSpacerItem *horizontalSpacer_ethernet_port2;
+    QLineEdit *lineEdit_ethernet_port;
+    QSpacerItem *horizontalSpacer_ethernet_port3;
+    QFrame *ios_separator_ethernet2;
+    QFrame *ios_row_ethernet_iptype;
+    QHBoxLayout *ios_row_ethernet_iptypeLayout;
+    QSpacerItem *horizontalSpacer_ethernet_iptype;
+    QLabel *label_ethernet_iptype;
+    QSpacerItem *horizontalSpacer_ethernet_iptype2;
+    QComboBox *comboBox_ethernet_iptype;
+    QSpacerItem *horizontalSpacer_ethernet_iptype3;
+    QFrame *ios_separator_ethernet3;
+    QFrame *ios_row_ethernet_timeout;
+    QHBoxLayout *ios_row_ethernet_timeoutLayout;
+    QSpacerItem *horizontalSpacer_ethernet_timeout;
+    QLabel *label_ethernet_timeout;
+    QSpacerItem *horizontalSpacer_ethernet_timeout2;
+    QLineEdit *lineEdit_ethernet_timeout;
+    QSpacerItem *horizontalSpacer_ethernet_timeout3;
     QSpacerItem *verticalSpacer_ethernet;
     QWidget *tab_rs232;
     QVBoxLayout *verticalLayout_rs232;
@@ -193,6 +213,15 @@ public:
     QPushButton *pushButton_rs232_2;
     QPushButton *pushButton_rs232_3;
     QSpacerItem *verticalSpacer_rs232;
+    QWidget *tab7;
+    QVBoxLayout *verticalLayout_6;
+    QFrame *card7;
+    QVBoxLayout *card7Layout;
+    QLabel *description7;
+    QPushButton *pushButton7_1;
+    QPushButton *pushButton7_2;
+    QPushButton *pushButton7_3;
+    QSpacerItem *verticalSpacer_5;
     QWidget *tab9;
     QTabWidget *tabWidget_modbus;
     QWidget *tab_tcp;
@@ -809,47 +838,6 @@ public:
 
         tabWidget_4->addTab(tab_digital, QString());
         tabWidget->addTab(tab6, QString());
-        tab7 = new QWidget();
-        tab7->setObjectName(QString::fromUtf8("tab7"));
-        verticalLayout_6 = new QVBoxLayout(tab7);
-        verticalLayout_6->setSpacing(16);
-        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
-        verticalLayout_6->setContentsMargins(20, 20, 20, 20);
-        card7 = new QFrame(tab7);
-        card7->setObjectName(QString::fromUtf8("card7"));
-        card7->setFrameShape(QFrame::NoFrame);
-        card7Layout = new QVBoxLayout(card7);
-        card7Layout->setObjectName(QString::fromUtf8("card7Layout"));
-        description7 = new QLabel(card7);
-        description7->setObjectName(QString::fromUtf8("description7"));
-        description7->setAlignment(Qt::AlignCenter);
-        description7->setWordWrap(true);
-
-        card7Layout->addWidget(description7);
-
-        pushButton7_1 = new QPushButton(card7);
-        pushButton7_1->setObjectName(QString::fromUtf8("pushButton7_1"));
-
-        card7Layout->addWidget(pushButton7_1);
-
-        pushButton7_2 = new QPushButton(card7);
-        pushButton7_2->setObjectName(QString::fromUtf8("pushButton7_2"));
-
-        card7Layout->addWidget(pushButton7_2);
-
-        pushButton7_3 = new QPushButton(card7);
-        pushButton7_3->setObjectName(QString::fromUtf8("pushButton7_3"));
-
-        card7Layout->addWidget(pushButton7_3);
-
-
-        verticalLayout_6->addWidget(card7);
-
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_6->addItem(verticalSpacer_5);
-
-        tabWidget->addTab(tab7, QString());
         tab8 = new QWidget();
         tab8->setObjectName(QString::fromUtf8("tab8"));
         tabWidget_5 = new QTabWidget(tab8);
@@ -948,29 +936,180 @@ public:
         verticalLayout_ethernet->setContentsMargins(20, 20, 20, 20);
         card_ethernet = new QFrame(tab_ethernet);
         card_ethernet->setObjectName(QString::fromUtf8("card_ethernet"));
+        card_ethernet->setStyleSheet(QString::fromUtf8(""));
+        card_ethernet->setFrameShape(QFrame::StyledPanel);
+        card_ethernet->setFrameShadow(QFrame::Raised);
         card_ethernetLayout = new QVBoxLayout(card_ethernet);
+        card_ethernetLayout->setSpacing(12);
         card_ethernetLayout->setObjectName(QString::fromUtf8("card_ethernetLayout"));
+        card_ethernetLayout->setContentsMargins(16, 16, 16, 16);
         description_ethernet = new QLabel(card_ethernet);
         description_ethernet->setObjectName(QString::fromUtf8("description_ethernet"));
+        description_ethernet->setStyleSheet(QString::fromUtf8(""));
         description_ethernet->setAlignment(Qt::AlignCenter);
         description_ethernet->setWordWrap(true);
 
         card_ethernetLayout->addWidget(description_ethernet);
 
-        pushButton_ethernet_1 = new QPushButton(card_ethernet);
-        pushButton_ethernet_1->setObjectName(QString::fromUtf8("pushButton_ethernet_1"));
+        ios_row_ethernet_ip = new QFrame(card_ethernet);
+        ios_row_ethernet_ip->setObjectName(QString::fromUtf8("ios_row_ethernet_ip"));
+        ios_row_ethernet_ipLayout = new QHBoxLayout(ios_row_ethernet_ip);
+        ios_row_ethernet_ipLayout->setObjectName(QString::fromUtf8("ios_row_ethernet_ipLayout"));
+        ios_row_ethernet_ipLayout->setProperty("minimumHeight", QVariant(44));
+        ios_row_ethernet_ipLayout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_ethernet_ip = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        card_ethernetLayout->addWidget(pushButton_ethernet_1);
+        ios_row_ethernet_ipLayout->addItem(horizontalSpacer_ethernet_ip);
 
-        pushButton_ethernet_2 = new QPushButton(card_ethernet);
-        pushButton_ethernet_2->setObjectName(QString::fromUtf8("pushButton_ethernet_2"));
+        label_ethernet_ip = new QLabel(ios_row_ethernet_ip);
+        label_ethernet_ip->setObjectName(QString::fromUtf8("label_ethernet_ip"));
+        label_ethernet_ip->setStyleSheet(QString::fromUtf8(""));
 
-        card_ethernetLayout->addWidget(pushButton_ethernet_2);
+        ios_row_ethernet_ipLayout->addWidget(label_ethernet_ip);
 
-        pushButton_ethernet_3 = new QPushButton(card_ethernet);
-        pushButton_ethernet_3->setObjectName(QString::fromUtf8("pushButton_ethernet_3"));
+        horizontalSpacer_ethernet_ip2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        card_ethernetLayout->addWidget(pushButton_ethernet_3);
+        ios_row_ethernet_ipLayout->addItem(horizontalSpacer_ethernet_ip2);
+
+        lineEdit_ethernet_ip = new QLineEdit(ios_row_ethernet_ip);
+        lineEdit_ethernet_ip->setObjectName(QString::fromUtf8("lineEdit_ethernet_ip"));
+        lineEdit_ethernet_ip->setMinimumSize(QSize(200, 0));
+
+        ios_row_ethernet_ipLayout->addWidget(lineEdit_ethernet_ip);
+
+        horizontalSpacer_ethernet_ip3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_ipLayout->addItem(horizontalSpacer_ethernet_ip3);
+
+
+        card_ethernetLayout->addWidget(ios_row_ethernet_ip);
+
+        ios_separator_ethernet1 = new QFrame(card_ethernet);
+        ios_separator_ethernet1->setObjectName(QString::fromUtf8("ios_separator_ethernet1"));
+        ios_separator_ethernet1->setStyleSheet(QString::fromUtf8("background-color: #e5e5ea; border: none; max-height: 1px;"));
+        ios_separator_ethernet1->setFrameShape(QFrame::HLine);
+        ios_separator_ethernet1->setFrameShadow(QFrame::Sunken);
+
+        card_ethernetLayout->addWidget(ios_separator_ethernet1);
+
+        ios_row_ethernet_port = new QFrame(card_ethernet);
+        ios_row_ethernet_port->setObjectName(QString::fromUtf8("ios_row_ethernet_port"));
+        ios_row_ethernet_portLayout = new QHBoxLayout(ios_row_ethernet_port);
+        ios_row_ethernet_portLayout->setObjectName(QString::fromUtf8("ios_row_ethernet_portLayout"));
+        ios_row_ethernet_portLayout->setProperty("minimumHeight", QVariant(44));
+        ios_row_ethernet_portLayout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_ethernet_port = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_portLayout->addItem(horizontalSpacer_ethernet_port);
+
+        label_ethernet_port = new QLabel(ios_row_ethernet_port);
+        label_ethernet_port->setObjectName(QString::fromUtf8("label_ethernet_port"));
+        label_ethernet_port->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_ethernet_portLayout->addWidget(label_ethernet_port);
+
+        horizontalSpacer_ethernet_port2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_ethernet_portLayout->addItem(horizontalSpacer_ethernet_port2);
+
+        lineEdit_ethernet_port = new QLineEdit(ios_row_ethernet_port);
+        lineEdit_ethernet_port->setObjectName(QString::fromUtf8("lineEdit_ethernet_port"));
+        lineEdit_ethernet_port->setMinimumSize(QSize(200, 0));
+
+        ios_row_ethernet_portLayout->addWidget(lineEdit_ethernet_port);
+
+        horizontalSpacer_ethernet_port3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_portLayout->addItem(horizontalSpacer_ethernet_port3);
+
+
+        card_ethernetLayout->addWidget(ios_row_ethernet_port);
+
+        ios_separator_ethernet2 = new QFrame(card_ethernet);
+        ios_separator_ethernet2->setObjectName(QString::fromUtf8("ios_separator_ethernet2"));
+        ios_separator_ethernet2->setStyleSheet(QString::fromUtf8("background-color: #e5e5ea; border: none; max-height: 1px;"));
+        ios_separator_ethernet2->setFrameShape(QFrame::HLine);
+        ios_separator_ethernet2->setFrameShadow(QFrame::Sunken);
+
+        card_ethernetLayout->addWidget(ios_separator_ethernet2);
+
+        ios_row_ethernet_iptype = new QFrame(card_ethernet);
+        ios_row_ethernet_iptype->setObjectName(QString::fromUtf8("ios_row_ethernet_iptype"));
+        ios_row_ethernet_iptypeLayout = new QHBoxLayout(ios_row_ethernet_iptype);
+        ios_row_ethernet_iptypeLayout->setObjectName(QString::fromUtf8("ios_row_ethernet_iptypeLayout"));
+        ios_row_ethernet_iptypeLayout->setProperty("minimumHeight", QVariant(44));
+        ios_row_ethernet_iptypeLayout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_ethernet_iptype = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_iptypeLayout->addItem(horizontalSpacer_ethernet_iptype);
+
+        label_ethernet_iptype = new QLabel(ios_row_ethernet_iptype);
+        label_ethernet_iptype->setObjectName(QString::fromUtf8("label_ethernet_iptype"));
+        label_ethernet_iptype->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_ethernet_iptypeLayout->addWidget(label_ethernet_iptype);
+
+        horizontalSpacer_ethernet_iptype2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_ethernet_iptypeLayout->addItem(horizontalSpacer_ethernet_iptype2);
+
+        comboBox_ethernet_iptype = new QComboBox(ios_row_ethernet_iptype);
+        comboBox_ethernet_iptype->addItem(QString());
+        comboBox_ethernet_iptype->addItem(QString());
+        comboBox_ethernet_iptype->addItem(QString());
+        comboBox_ethernet_iptype->setObjectName(QString::fromUtf8("comboBox_ethernet_iptype"));
+        comboBox_ethernet_iptype->setMinimumSize(QSize(200, 0));
+        comboBox_ethernet_iptype->setFrame(true);
+
+        ios_row_ethernet_iptypeLayout->addWidget(comboBox_ethernet_iptype);
+
+        horizontalSpacer_ethernet_iptype3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_iptypeLayout->addItem(horizontalSpacer_ethernet_iptype3);
+
+
+        card_ethernetLayout->addWidget(ios_row_ethernet_iptype);
+
+        ios_separator_ethernet3 = new QFrame(card_ethernet);
+        ios_separator_ethernet3->setObjectName(QString::fromUtf8("ios_separator_ethernet3"));
+        ios_separator_ethernet3->setStyleSheet(QString::fromUtf8("background-color: #e5e5ea; border: none; max-height: 1px;"));
+        ios_separator_ethernet3->setFrameShape(QFrame::HLine);
+        ios_separator_ethernet3->setFrameShadow(QFrame::Sunken);
+
+        card_ethernetLayout->addWidget(ios_separator_ethernet3);
+
+        ios_row_ethernet_timeout = new QFrame(card_ethernet);
+        ios_row_ethernet_timeout->setObjectName(QString::fromUtf8("ios_row_ethernet_timeout"));
+        ios_row_ethernet_timeoutLayout = new QHBoxLayout(ios_row_ethernet_timeout);
+        ios_row_ethernet_timeoutLayout->setObjectName(QString::fromUtf8("ios_row_ethernet_timeoutLayout"));
+        ios_row_ethernet_timeoutLayout->setProperty("minimumHeight", QVariant(44));
+        ios_row_ethernet_timeoutLayout->setContentsMargins(16, 12, 16, 12);
+        horizontalSpacer_ethernet_timeout = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_timeoutLayout->addItem(horizontalSpacer_ethernet_timeout);
+
+        label_ethernet_timeout = new QLabel(ios_row_ethernet_timeout);
+        label_ethernet_timeout->setObjectName(QString::fromUtf8("label_ethernet_timeout"));
+        label_ethernet_timeout->setStyleSheet(QString::fromUtf8(""));
+
+        ios_row_ethernet_timeoutLayout->addWidget(label_ethernet_timeout);
+
+        horizontalSpacer_ethernet_timeout2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ios_row_ethernet_timeoutLayout->addItem(horizontalSpacer_ethernet_timeout2);
+
+        lineEdit_ethernet_timeout = new QLineEdit(ios_row_ethernet_timeout);
+        lineEdit_ethernet_timeout->setObjectName(QString::fromUtf8("lineEdit_ethernet_timeout"));
+        lineEdit_ethernet_timeout->setMinimumSize(QSize(200, 0));
+
+        ios_row_ethernet_timeoutLayout->addWidget(lineEdit_ethernet_timeout);
+
+        horizontalSpacer_ethernet_timeout3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        ios_row_ethernet_timeoutLayout->addItem(horizontalSpacer_ethernet_timeout3);
+
+
+        card_ethernetLayout->addWidget(ios_row_ethernet_timeout);
 
 
         verticalLayout_ethernet->addWidget(card_ethernet);
@@ -1021,6 +1160,47 @@ public:
 
         tabWidget_5->addTab(tab_rs232, QString());
         tabWidget->addTab(tab8, QString());
+        tab7 = new QWidget();
+        tab7->setObjectName(QString::fromUtf8("tab7"));
+        verticalLayout_6 = new QVBoxLayout(tab7);
+        verticalLayout_6->setSpacing(16);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(20, 20, 20, 20);
+        card7 = new QFrame(tab7);
+        card7->setObjectName(QString::fromUtf8("card7"));
+        card7->setFrameShape(QFrame::NoFrame);
+        card7Layout = new QVBoxLayout(card7);
+        card7Layout->setObjectName(QString::fromUtf8("card7Layout"));
+        description7 = new QLabel(card7);
+        description7->setObjectName(QString::fromUtf8("description7"));
+        description7->setAlignment(Qt::AlignCenter);
+        description7->setWordWrap(true);
+
+        card7Layout->addWidget(description7);
+
+        pushButton7_1 = new QPushButton(card7);
+        pushButton7_1->setObjectName(QString::fromUtf8("pushButton7_1"));
+
+        card7Layout->addWidget(pushButton7_1);
+
+        pushButton7_2 = new QPushButton(card7);
+        pushButton7_2->setObjectName(QString::fromUtf8("pushButton7_2"));
+
+        card7Layout->addWidget(pushButton7_2);
+
+        pushButton7_3 = new QPushButton(card7);
+        pushButton7_3->setObjectName(QString::fromUtf8("pushButton7_3"));
+
+        card7Layout->addWidget(pushButton7_3);
+
+
+        verticalLayout_6->addWidget(card7);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_6->addItem(verticalSpacer_5);
+
+        tabWidget->addTab(tab7, QString());
         tab9 = new QWidget();
         tab9->setObjectName(QString::fromUtf8("tab9"));
         tabWidget_modbus = new QTabWidget(tab9);
@@ -1141,10 +1321,10 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(5);
+        tabWidget->setCurrentIndex(4);
         tabWidget_4->setCurrentIndex(1);
-        tabWidget_5->setCurrentIndex(0);
-        tabWidget_modbus->setCurrentIndex(0);
+        tabWidget_5->setCurrentIndex(2);
+        tabWidget_modbus->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1245,11 +1425,6 @@ public:
         comboBox_delay->setCurrentText(QCoreApplication::translate("MainWindow", "0s", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_digital), QCoreApplication::translate("MainWindow", "Digital", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab6), QCoreApplication::translate("MainWindow", "Inputs", nullptr));
-        description7->setText(QCoreApplication::translate("MainWindow", "System monitoring and diagnostics", nullptr));
-        pushButton7_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\210 Monitoring", nullptr));
-        pushButton7_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\215 Diagnostics", nullptr));
-        pushButton7_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\213 Reports", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab7), QCoreApplication::translate("MainWindow", "Outputs", nullptr));
         description_rs485->setText(QCoreApplication::translate("MainWindow", "RS-485 communication configuration", nullptr));
         pushButton_rs485_1->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Baud Rate Settings", nullptr));
         pushButton_rs485_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Protocol Configuration", nullptr));
@@ -1261,9 +1436,20 @@ public:
         pushButton_can_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\241 Message Filters", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_can), QCoreApplication::translate("MainWindow", "CAN", nullptr));
         description_ethernet->setText(QCoreApplication::translate("MainWindow", "Ethernet network configuration", nullptr));
-        pushButton_ethernet_1->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 IP Configuration", nullptr));
-        pushButton_ethernet_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Port Settings", nullptr));
-        pushButton_ethernet_3->setText(QCoreApplication::translate("MainWindow", "\360\237\233\241\357\270\217 Firewall Settings", nullptr));
+        label_ethernet_ip->setText(QCoreApplication::translate("MainWindow", "IP Address", nullptr));
+        lineEdit_ethernet_ip->setText(QCoreApplication::translate("MainWindow", "192.168.1.100", nullptr));
+        lineEdit_ethernet_ip->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter IP address", nullptr));
+        label_ethernet_port->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
+        lineEdit_ethernet_port->setText(QCoreApplication::translate("MainWindow", "502", nullptr));
+        lineEdit_ethernet_port->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter port number", nullptr));
+        label_ethernet_iptype->setText(QCoreApplication::translate("MainWindow", "IP Type", nullptr));
+        comboBox_ethernet_iptype->setItemText(0, QCoreApplication::translate("MainWindow", "Static", nullptr));
+        comboBox_ethernet_iptype->setItemText(1, QCoreApplication::translate("MainWindow", "DHCP", nullptr));
+        comboBox_ethernet_iptype->setItemText(2, QCoreApplication::translate("MainWindow", "Auto", nullptr));
+
+        label_ethernet_timeout->setText(QCoreApplication::translate("MainWindow", "Connection Timeout", nullptr));
+        lineEdit_ethernet_timeout->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
+        lineEdit_ethernet_timeout->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter timeout in seconds", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_ethernet), QCoreApplication::translate("MainWindow", "Ethernet", nullptr));
         description_rs232->setText(QCoreApplication::translate("MainWindow", "RS-232 serial communication configuration", nullptr));
         pushButton_rs232_1->setText(QCoreApplication::translate("MainWindow", "\342\232\231\357\270\217 Serial Port Settings", nullptr));
@@ -1271,6 +1457,11 @@ public:
         pushButton_rs232_3->setText(QCoreApplication::translate("MainWindow", "\360\237\224\247 Flow Control", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_rs232), QCoreApplication::translate("MainWindow", "RS-232", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab8), QCoreApplication::translate("MainWindow", "Communications", nullptr));
+        description7->setText(QCoreApplication::translate("MainWindow", "System monitoring and diagnostics", nullptr));
+        pushButton7_1->setText(QCoreApplication::translate("MainWindow", "\360\237\223\210 Monitoring", nullptr));
+        pushButton7_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\215 Diagnostics", nullptr));
+        pushButton7_3->setText(QCoreApplication::translate("MainWindow", "\360\237\223\213 Reports", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab7), QCoreApplication::translate("MainWindow", "Outputs", nullptr));
         description_tcp->setText(QCoreApplication::translate("MainWindow", "MODBUS TCP communication configuration", nullptr));
         pushButton_tcp_1->setText(QCoreApplication::translate("MainWindow", "\360\237\214\220 IP Address", nullptr));
         pushButton_tcp_2->setText(QCoreApplication::translate("MainWindow", "\360\237\224\214 Port Number", nullptr));
